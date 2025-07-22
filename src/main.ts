@@ -349,7 +349,10 @@ function initializeMap() {
   // Create all dashboard panels and toggle buttons (existing code)
   createDashboardPanels();
 
-  selectedFeatures.on(['add', 'remove'], function () {
+  // Create animated radar footer
+  createRadarFooter();
+
+selectedFeatures.on(['add', 'remove'], function () {
     const selectedCountries = selectedFeatures.getArray();
     
     // Clear any pending deselection timeout since we have a new selection event
@@ -706,4 +709,141 @@ function createDashboardPanels() {
       planActionPanel.style.display = 'none';
     }
   });
+}
+
+// Function to create animated radar footer
+function createRadarFooter() {
+  // Create footer container
+  const footer = document.createElement('div');
+  footer.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 1000;
+  `;
+
+  // Create radar container
+  const radarContainer = document.createElement('div');
+  radarContainer.id = 'radar';
+  radarContainer.style.cssText = `
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: black;
+    border-radius: 50%;
+  `;
+
+  // Create canvas for radar animation
+  const canvas = document.createElement('canvas');
+  const diameter = 30;
+  const radius = diameter / 2;
+  canvas.width = diameter;
+  canvas.height = diameter;
+  canvas.style.cssText = `
+    width: ${diameter}px;
+    height: ${diameter}px;
+    display: block;
+  `;
+
+  const ctx = canvas.getContext('2d')!;
+
+  // Radar animation variables
+  let sweepAngle = 270;
+  const sweepSize = 2;
+  const sweepSpeed = 1.2;
+  const rings = 3; // Reduced for smaller size
+  const hueStart = 120;
+  const hueEnd = 170;
+  const hueDiff = Math.abs(hueEnd - hueStart);
+  const saturation = 60;
+  const lightness = 50;
+  const lineWidth = 1;
+
+  // Create gradient
+  const gradient = ctx.createLinearGradient(radius, 0, 0, 0);
+  gradient.addColorStop(0, `hsla(${hueStart}, ${saturation}%, ${lightness}%, 1)`);
+  gradient.addColorStop(1, `hsla(${hueEnd}, ${saturation}%, ${lightness}%, 0.1)`);
+
+  // Utility function
+  const dToR = (degrees: number) => degrees * (Math.PI / 180);
+
+  // Render functions
+  const renderRings = () => {
+    for (let i = 0; i < rings; i++) {
+      ctx.beginPath();
+      ctx.arc(radius, radius, ((radius - (lineWidth / 2)) / rings) * (i + 1), 0, Math.PI * 2, false);
+      ctx.strokeStyle = `hsla(${hueEnd - (i * (hueDiff / rings))}, ${saturation}%, ${lightness}%, 0.3)`;
+      ctx.lineWidth = lineWidth;
+      ctx.stroke();
+    }
+  };
+
+  const renderGrid = () => {
+    ctx.beginPath();
+    ctx.moveTo(radius - lineWidth / 2, lineWidth);
+    ctx.lineTo(radius - lineWidth / 2, diameter - lineWidth);
+    ctx.moveTo(lineWidth, radius - lineWidth / 2);
+    ctx.lineTo(diameter - lineWidth, radius - lineWidth / 2);
+    ctx.strokeStyle = `hsla(${(hueStart + hueEnd) / 2}, ${saturation}%, ${lightness}%, 0.2)`;
+    ctx.lineWidth = lineWidth;
+    ctx.stroke();
+  };
+
+  const renderSweep = () => {
+    ctx.save();
+    ctx.translate(radius, radius);
+    ctx.rotate(dToR(sweepAngle));
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.arc(0, 0, radius - 1, dToR(-sweepSize), dToR(sweepSize), false);
+    ctx.closePath();
+    ctx.fillStyle = gradient;
+    ctx.fill();
+    ctx.restore();
+  };
+
+  const clearCanvas = () => {
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.fillStyle = 'hsla(0, 0%, 0%, 0.1)';
+    ctx.fillRect(0, 0, diameter, diameter);
+  };
+
+  const draw = () => {
+    ctx.globalCompositeOperation = 'lighter';
+    renderRings();
+    renderGrid();
+    renderSweep();
+  };
+
+  // Animation loop
+  const animate = () => {
+    clearCanvas();
+    sweepAngle += sweepSpeed;
+    draw();
+    requestAnimationFrame(animate);
+  };
+
+  // Create text label
+  const label = document.createElement('span');
+  label.textContent = 'RADAR by Sydnee, Andy, Max, and Liam';
+  label.style.cssText = `
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 0.5px;
+  `;
+
+  // Assemble footer
+  radarContainer.appendChild(canvas);
+  footer.appendChild(radarContainer);
+  footer.appendChild(label);
+  document.body.appendChild(footer);
+
+  // Start animation
+  animate();
 }
