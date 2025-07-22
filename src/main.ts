@@ -5,10 +5,8 @@ import Map from 'ol/Map.js';
 import VectorLayer from 'ol/layer/Vector.js';
 import VectorSource from 'ol/source/Vector.js';
 import View from 'ol/View.js';
-import {DragBox, Select} from 'ol/interaction.js';
+import {Select} from 'ol/interaction.js';
 import {Fill, Stroke, Style} from 'ol/style.js';
-import {getWidth} from 'ol/extent.js';
-import {platformModifierKeyOnly} from 'ol/events/condition.js';
 import Feature from 'ol/Feature.js';
 
 // Global variables to track initialization state
@@ -150,7 +148,29 @@ function initializeMap() {
   });
   map.addInteraction(select);
 
+  // Ensure only single selection by clearing previous selections
+  select.on('select', function(event) {
+    if (event.selected.length > 0 && selectedFeatures.getLength() > 1) {
+      // Clear all and select only the most recent
+      const newSelection = event.selected[event.selected.length - 1];
+      selectedFeatures.clear();
+      selectedFeatures.push(newSelection);
+    }
+  });
+
   selectedFeatures = select.getFeatures();
+
+  // Add click handler for deselecting when clicking on ocean/empty areas
+  map.on('click', function(evt) {
+    const feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
+      return feature;
+    });
+    
+    // If no feature was clicked (ocean/empty area), clear selection
+    if (!feature) {
+      selectedFeatures.clear();
+    }
+  });
 
   // Add hover effect
   let hoveredFeature: Feature | null = null;
@@ -198,74 +218,6 @@ function initializeMap() {
 
   // Store original view state for returning after zoom
   let originalViewState: { center: number[], zoom: number } | null = null;
-  let deselectionTimeout: ReturnType<typeof setTimeout> | null = null;
-
-  // a DragBox interaction used to select features by drawing boxes
-  const dragBox = new DragBox({
-    condition: platformModifierKeyOnly,
-  });
-
-  map.addInteraction(dragBox);
-
-  dragBox.on('boxend', function () {
-    const boxExtent = dragBox.getGeometry()!.getExtent();
-
-    // if the extent crosses the antimeridian process each world separately
-    const worldExtent = map.getView().getProjection().getExtent();
-    const worldWidth = getWidth(worldExtent);
-    const startWorld = Math.floor((boxExtent[0] - worldExtent[0]) / worldWidth);
-    const endWorld = Math.floor((boxExtent[2] - worldExtent[0]) / worldWidth);
-
-    for (let world = startWorld; world <= endWorld; ++world) {
-      const left = Math.max(boxExtent[0] - world * worldWidth, worldExtent[0]);
-      const right = Math.min(boxExtent[2] - world * worldWidth, worldExtent[2]);
-      const extent = [left, boxExtent[1], right, boxExtent[3]];
-
-      const boxFeatures = vectorSource
-        .getFeaturesInExtent(extent)
-        .filter(
-          (feature) =>
-            !selectedFeatures.getArray().includes(feature) &&
-            feature.getGeometry()!.intersectsExtent(extent),
-        );
-
-      // features that intersect the box geometry are added to the
-      // collection of selected features
-
-      // if the view is not obliquely rotated the box geometry and
-      // its extent are equalivalent so intersecting features can
-      // be added directly to the collection
-      const rotation = map.getView().getRotation();
-      const oblique = rotation % (Math.PI / 2) !== 0;
-
-      // when the view is obliquely rotated the box extent will
-      // exceed its geometry so both the box and the candidate
-      // feature geometries are rotated around a common anchor
-      // to confirm that, with the box geometry aligned with its
-      // extent, the geometries intersect
-      if (oblique) {
-        const anchor = [0, 0];
-        const geometry = dragBox.getGeometry()!.clone();
-        geometry.translate(-world * worldWidth, 0);
-        geometry.rotate(-rotation, anchor);
-        const extent = geometry.getExtent();
-        boxFeatures.forEach(function (feature) {
-          const geometry = feature.getGeometry()!.clone();
-          geometry.rotate(-rotation, anchor);
-          if (geometry.intersectsExtent(extent)) {
-            selectedFeatures.push(feature);
-          }
-        });
-      } else {
-        selectedFeatures.extend(boxFeatures);
-      }
-    }
-  });
-
-  // clear selection when drawing a new box and when clicking on the map
-  dragBox.on('boxstart', function () {
-    selectedFeatures.clear();
-  });
 
   // Create sidebar element
   sidebar = document.createElement('div');
@@ -355,12 +307,6 @@ function initializeMap() {
 selectedFeatures.on(['add', 'remove'], function () {
     const selectedCountries = selectedFeatures.getArray();
     
-    // Clear any pending deselection timeout since we have a new selection event
-    if (deselectionTimeout) {
-      clearTimeout(deselectionTimeout);
-      deselectionTimeout = null;
-    }
-    
     if (selectedCountries.length === 1) {
       // Store original view state only if this is the first selection
       if (!originalViewState) {
@@ -400,48 +346,8 @@ selectedFeatures.on(['add', 'remove'], function () {
         });
       }
       
-    } else if (selectedCountries.length > 1) {
-      // Store original view state only if this is the first selection
-      if (!originalViewState) {
-        const view = map.getView();
-        originalViewState = {
-          center: view.getCenter()!.slice(),
-          zoom: view.getZoom()!
-        };
-      }
-      
-      // Show sidebar for multiple countries
-      const countryNameElement = document.getElementById('country-name');
-      if (countryNameElement) {
-        countryNameElement.textContent = `${selectedCountries.length} Countries Selected`;
-      }
-      sidebar.style.left = '30px';
-      
-      // Zoom to fit all selected countries
-      const allExtents = selectedCountries
-        .map((feature: any) => feature.getGeometry()?.getExtent())
-        .filter((extent: any) => extent !== undefined) as number[][];
-      
-      if (allExtents.length > 0) {
-        // Calculate combined extent of all selected countries
-        const combinedExtent = allExtents.reduce((combined: number[], extent: number[]) => {
-          return [
-            Math.min(combined[0], extent[0]), // min x
-            Math.min(combined[1], extent[1]), // min y
-            Math.max(combined[2], extent[2]), // max x
-            Math.max(combined[3], extent[3])  // max y
-          ];
-        });
-        
-        map.getView().fit(combinedExtent, {
-          duration: 800,
-          padding: [50, 50, 50, 50],
-          maxZoom: 6
-        });
-      }
-      
     } else {
-      // Immediately handle deselection - no timeout needed for direct deselection
+      // No selection - hide sidebar and return to original view
       sidebar.style.left = '-380px';
       
       // Return to original view state if we have it stored
