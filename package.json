@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "typescript": "~5.8.3",
+<<<<<<< HEAD
     "vite": "^7.0.5",
     "nodemon": "^3.0.1",
     "concurrently": "^8.2.2",
@@ -40,5 +41,11 @@
       "backend/**/*.js",
       "!backend/server.js"
     ]
+=======
+    "vite": "^7.0.5"
+  },
+  "dependencies": {
+    "ol": "^10.6.1"
+>>>>>>> b388476562f60df57d2db4ca44846e93895f665f
   }
 }
