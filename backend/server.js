@@ -3,6 +3,9 @@ import cors from 'cors';
 import { OpenAI } from 'openai';
 import * as cron from 'node-cron';
 import axios from 'axios';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -43,6 +46,74 @@ let newsData = {
   newsHistory: [] // Store all news items with timestamps
 };
 
+// Function to clean up duplicate country entries
+function cleanupDuplicateCountries() {
+  console.log('Cleaning up duplicate country entries...');
+  
+  const duplicateMapping = {
+    'United States': 'US',
+    'United States of America': 'US',
+    'USA': 'US',
+    'UK': 'United Kingdom',
+    'Great Britain': 'United Kingdom'
+  };
+  
+  Object.keys(duplicateMapping).forEach(duplicateName => {
+    const targetName = duplicateMapping[duplicateName];
+    
+    if (newsData.countries[duplicateName] && newsData.countries[targetName]) {
+      console.log(`Merging ${duplicateName} into ${targetName}`);
+      
+      // Merge the news history
+      const duplicateHistory = newsData.newsHistory.filter(item => item.country === duplicateName);
+      duplicateHistory.forEach(item => {
+        item.country = targetName; // Update country reference
+      });
+      
+      // Remove the duplicate country entry  
+      delete newsData.countries[duplicateName];
+      
+      // Recalculate scores for the target country with merged data
+      const mergedHistory = newsData.newsHistory.filter(item => item.country === targetName);
+      const industryScores = calculateIndustryScores(mergedHistory);
+      const overallScore = calculateOverallScore(industryScores);
+      
+      // Update the target country with merged data
+      if (newsData.countries[targetName]) {
+        newsData.countries[targetName].overallScore = overallScore;
+        newsData.countries[targetName].industryScores = industryScores;
+        newsData.countries[targetName].lastUpdated = new Date().toISOString();
+      }
+    }
+  });
+  
+  console.log('Duplicate cleanup completed');
+}
+
+// Load initial news data from JSON file
+function loadInitialNewsData() {
+  try {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+    const initialDataPath = path.join(__dirname, 'initial-news-data.json');
+    
+    if (fs.existsSync(initialDataPath)) {
+      const initialData = JSON.parse(fs.readFileSync(initialDataPath, 'utf8'));
+      newsData = { ...newsData, ...initialData };
+      console.log('✅ Initial news data loaded successfully');
+      console.log(`📊 Loaded data for ${Object.keys(newsData.countries).length} countries`);
+    } else {
+      console.log('⚠️  Initial news data file not found, starting with empty data');
+    }
+  } catch (error) {
+    console.error('❌ Error loading initial news data:', error.message);
+    console.log('Starting with empty news data');
+  }
+}
+
+// Load initial data on startup
+loadInitialNewsData();
+
 // News sources configuration
 const NEWS_SOURCES = {
   bloomberg: 'https://www.bloomberg.com',
@@ -52,19 +123,19 @@ const NEWS_SOURCES = {
 };
 
 // Regions and industries configuration
-const REGIONS = ['US', 'Europe', 'Australia', 'South Korea'];
+const REGIONS = ['United States', 'Mexico', 'Canada', 'Japan', 'South Korea', 'China', 'Singapore', 'Australia', 'France', 'Spain', 'Germany', 'Italy', 'Portugal', 'India', 'Netherlands', 'Brazil'];
 const INDUSTRIES = ['Beauty/wellness', 'clothing/apparel', 'retail', 'ticketing/events'];
 
 // Function to generate the analysis prompt
 function generateAnalysisPrompt(regions = REGIONS, industries = INDUSTRIES) {
   const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
-  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+  const twoWeeksAgo = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
   
-  return `You are an expert at understanding macro and micro economic trends (with an emphasis on macroeconomic) in the past 7 days across the world in the direct context of advertising industry.
+  return `You are an expert investment analyst specializing in advertising and marketing opportunities across global markets. Your job is to identify specific, actionable industry trends that will help advertising professionals decide WHERE and HOW to invest their marketing budgets.
 
-CRITICAL: Today's date is ${currentDate}. You must ONLY include news articles that were published between ${sevenDaysAgo} and ${currentDate} (within the last 7 days). Any article older than 7 days is completely unacceptable.
+CRITICAL: Today's date is ${currentDate}. You must ONLY include news articles that were published between ${twoWeeksAgo} and ${currentDate} (within the last 14 days). Any article older than 14 days is completely unacceptable.
 
-This will be outputted for a downstream front-end where a map will be shown where the user will click on that country to see the latest news regarding certain markets in order of importance.
+This will be outputted for advertising professionals and marketing strategists who need to make data-driven investment decisions about regional markets and industry verticals.
 
 Please output as this format:
 
@@ -76,37 +147,50 @@ Positivity score (10 being very positive for the business, 1 being very negative
 Importance score (10 being very important for the business, 1 being very unimportant for the business):
 
 Here are the variables
-{Regions}: ${regions.join(', ')}
+{Countries}: ${regions.join(', ')}
 {Possible industries}: ${industries.join(', ')}
 
+FOCUS ON INVESTMENT-RELEVANT NEWS TYPES:
+- GROWTH METRICS: "Beauty product sales surge 25% in Germany", "E-commerce transactions up 40% in Australia"
+- MARKET EXPANSION: "New retail chains opening 50 stores across Italy", "Fashion brands expanding into South Korean market"
+- CONSUMER BEHAVIOR SHIFTS: "Millennials driving 60% increase in wellness spending in France", "Digital payment adoption rises 35% in UK retail"
+- REGULATORY OPPORTUNITIES: "New advertising regulations create opportunities in Spanish digital marketing", "Data privacy changes benefit local UK advertisers"
+- INFRASTRUCTURE DEVELOPMENTS: "New airport terminals boost tourism advertising opportunities", "5G rollout increases mobile commerce in Germany"
+- COMPETITIVE LANDSCAPE CHANGES: "Major retailer exits German market, creating advertising opportunities", "Local beauty brands gain 30% market share from international competitors"
+- SEASONAL/EVENT-DRIVEN OPPORTUNITIES: "Olympics preparation creates €2B advertising opportunity in France", "Festival season drives 40% increase in event marketing spend"
+
 MANDATORY REQUIREMENTS:
-- ONLY include news from the last 7 days (${sevenDaysAgo} to ${currentDate})
-- Verify the publication date of every article before including it
-- Look for recent news in these sources: Bloomberg, Reuters, CNBC, Financial Times, Wall Street Journal, local news sources
-- Focus on recent economic developments, policy changes, market trends, and industry news
-- If you cannot find recent news for a country, skip that country entirely
-- All links must be to articles published in the last 7 days
-- CRITICAL: Provide FULL article URLs, not just domain names (e.g., "https://www.bloomberg.com/news/articles/2024-01-15/specific-article-title" not just "https://www.bloomberg.com")
-- Include 2-5 news items per country in order of importance
-- Only get news from official and credible economic or financial sources
-- try to get information from multiple sources (bloomberg, reuters, google trends)
-- include region sentiment analysis regarding the certain industry
-- When possible add official government sources, for example; "federal reserve announces..." or "Bank of Japan announces...."
-- Also include information possible regarding competitors and data privacy laws regarding advertising.
-- Make sure to specify the industry for each news item from the provided list: ${industries.join(', ')}
-- Include actual working URLs to the news articles
-- Format links as: [Article Title](https://actual-url.com)
-- Ensure all links are functional and accessible
-- Focus on recent economic news that impacts advertising industry
-- Include real, verifiable news sources with working links
-- If you cannot find recent news (within 7 days) for a country, skip that country rather than using old news`;
+- ONLY include news from the last 14 days (${twoWeeksAgo} to ${currentDate})
+- Focus on NEWS WITH SPECIFIC METRICS, PERCENTAGES, AND GROWTH NUMBERS
+- Look for market expansion, consumer behavior changes, regulatory shifts, and competitive opportunities
+- Each article should answer: "Should I invest more advertising budget in this region/industry?"
+- Include concrete data points: growth percentages, market size, consumer spending increases, etc.
+- CRITICAL: Provide FULL article URLs, not just domain names
+- Include 3-5 high-impact news items per country in order of investment opportunity
+- INDUSTRY-SPECIFIC INVESTMENT OPPORTUNITIES:
+  * Beauty/wellness: New product launches, market expansions, consumer trend shifts, brand partnerships, retail channel growth
+  * Clothing/apparel: Fashion week impacts, seasonal trends, sustainable fashion growth, brand expansions, demographic shifts
+  * Retail: E-commerce growth, new store openings, consumer spending patterns, payment method adoption, logistics improvements
+  * Ticketing/events: New venues, festival announcements, tourism growth, cultural events, sports expansions
+- EXAMPLES OF IDEAL HEADLINES:
+  * "Italian beauty market grows 18% as organic cosmetics surge"
+  * "German retail sector sees 25% increase in contactless payments"
+  * "UK music festival bookings up 45% following venue expansion"
+  * "French luxury fashion exports rise 30% to Asian markets"
+  * "Australian wellness spending hits record high with 22% growth"
+  * "Spanish tourism board launches €50M advertising campaign"
+- SCORING CRITERIA:
+  * Positivity Score: How beneficial is this trend for advertising investment? (10 = massive opportunity, 1 = major threat)
+  * Importance Score: How critical is this information for investment decisions? (10 = must-know for budget allocation, 1 = minor consideration)
+- Each country should represent a clear INVESTMENT THESIS with supporting data points
+- Focus on trends that create NEW ADVERTISING OPPORTUNITIES or THREATEN EXISTING INVESTMENTS`;
 }
 
 // Function to calculate industry scores
 function calculateIndustryScores(countryNews) {
   const industryScores = {};
   
-  // Initialize industry scores
+  // Initialize industry scores for all industries
   INDUSTRIES.forEach(industry => {
     industryScores[industry] = {
       positivityScore: 0,
@@ -118,29 +202,76 @@ function calculateIndustryScores(countryNews) {
   // Calculate scores for each industry
   countryNews.forEach(news => {
     if (news.industry) {
-      // Normalize industry name to lowercase for comparison
-      const normalizedIndustry = news.industry.toLowerCase();
-      const matchingIndustry = INDUSTRIES.find(industry => industry.toLowerCase() === normalizedIndustry);
+      // Find matching industry (flexible matching)
+      let matchingIndustry = null;
+      
+      // First try exact match
+      if (INDUSTRIES.includes(news.industry)) {
+        matchingIndustry = news.industry;
+      } else {
+        // Try case-insensitive match
+        matchingIndustry = INDUSTRIES.find(industry => 
+          industry.toLowerCase() === news.industry.toLowerCase()
+        );
+      }
+      
+      // Try partial matching for industries with variations
+      if (!matchingIndustry) {
+        const industryLower = news.industry.toLowerCase();
+        matchingIndustry = INDUSTRIES.find(industry => {
+          const industryKeywords = industry.toLowerCase().split(/[\/\s-]+/);
+          return industryKeywords.some(keyword => 
+            industryLower.includes(keyword) || keyword.includes(industryLower)
+          );
+        });
+      }
       
       if (matchingIndustry && industryScores[matchingIndustry]) {
-        industryScores[matchingIndustry].positivityScore += news.positivityScore || 0;
-        industryScores[matchingIndustry].importanceScore += news.importanceScore || 0;
+        // Ensure scores are valid numbers between 1-10
+        const positivityScore = Math.max(1, Math.min(10, parseFloat(news.positivityScore) || 5));
+        const importanceScore = Math.max(1, Math.min(10, parseFloat(news.importanceScore) || 5));
+        
+        industryScores[matchingIndustry].positivityScore += positivityScore;
+        industryScores[matchingIndustry].importanceScore += importanceScore;
         industryScores[matchingIndustry].count += 1;
       }
     }
   });
   
-  // Calculate averages
+  // Calculate averages with enhanced scaling
   const finalScores = {};
   INDUSTRIES.forEach(industry => {
     const scores = industryScores[industry];
     if (scores.count > 0) {
+      const avgPositivity = scores.positivityScore / scores.count;
+      const avgImportance = scores.importanceScore / scores.count;
+      const baseAverage = (avgPositivity + avgImportance) / 2;
+      
+      // Enhanced scaling for industry scores to spread them across full range
+      let enhancedAverage;
+      if (baseAverage >= 8.0) {
+        enhancedAverage = 8.5 + (baseAverage - 8.0) * 0.75; // Maps 8-10 to 8.5-10
+      } else if (baseAverage >= 6.0) {
+        enhancedAverage = 6.0 + (baseAverage - 6.0) * 1.25; // Maps 6-8 to 6-8.5
+      } else if (baseAverage >= 4.0) {   
+        enhancedAverage = 3.0 + (baseAverage - 4.0) * 1.5; // Maps 4-6 to 3-6
+      } else if (baseAverage >= 2.0) {
+        enhancedAverage = 1.5 + (baseAverage - 2.0) * 0.75; // Maps 2-4 to 1.5-3
+      } else {
+        enhancedAverage = 1.0 + (baseAverage - 1.0) * 0.5; // Maps 1-2 to 1-1.5
+      }
+      
+      // Apply investment opportunity weighting (importance matters more)
+      const weightedScore = (avgPositivity * 0.4) + (avgImportance * 0.6);
+      enhancedAverage = (enhancedAverage * 0.7) + (weightedScore * 0.3);
+      
       finalScores[industry] = {
-        positivityScore: Math.round((scores.positivityScore / scores.count) * 10) / 10,
-        importanceScore: Math.round((scores.importanceScore / scores.count) * 10) / 10,
-        averageScore: Math.round(((scores.positivityScore + scores.importanceScore) / (scores.count * 2)) * 10) / 10
+        positivityScore: Math.round(avgPositivity * 10) / 10,
+        importanceScore: Math.round(avgImportance * 10) / 10,
+        averageScore: Math.max(1.0, Math.min(10.0, Math.round(enhancedAverage * 10) / 10))
       };
     } else {
+      // No data for this industry - set neutral scores
       finalScores[industry] = {
         positivityScore: 0,
         importanceScore: 0,
@@ -152,22 +283,58 @@ function calculateIndustryScores(countryNews) {
   return finalScores;
 }
 
-// Function to calculate overall score
+// Function to calculate overall score with enhanced scaling
 function calculateOverallScore(industryScores) {
   const validScores = Object.values(industryScores).filter(score => score.averageScore > 0);
   
-  if (validScores.length === 0) return 0;
+  if (validScores.length === 0) return 5.0; // Default neutral score if no data
   
+  // Calculate base score (simple average)
   const totalScore = validScores.reduce((sum, score) => sum + score.averageScore, 0);
-  return Math.round((totalScore / validScores.length) * 10) / 10;
+  const baseScore = totalScore / validScores.length;
+  
+  // Enhanced scoring algorithm to spread values across 1-10 range
+  let enhancedScore;
+  
+  if (baseScore >= 7.0) {
+    // High scores: amplify to 8-10 range
+    enhancedScore = 8.0 + (baseScore - 7.0) * 2.0; // Maps 7-10 to 8-10
+  } else if (baseScore >= 5.0) {
+    // Medium scores: map to 4-8 range  
+    enhancedScore = 4.0 + (baseScore - 5.0) * 2.0; // Maps 5-7 to 4-8
+  } else if (baseScore >= 3.0) {
+    // Low scores: map to 2-4 range
+    enhancedScore = 2.0 + (baseScore - 3.0) * 1.0; // Maps 3-5 to 2-4
+  } else {
+    // Very low scores: map to 1-2 range
+    enhancedScore = 1.0 + (baseScore - 1.0) * 0.5; // Maps 1-3 to 1-2
+  }
+  
+  // Apply exponential scaling for more dramatic differentiation
+  const exponentialFactor = 1.2;
+  if (enhancedScore > 5.5) {
+    // Amplify good investment opportunities
+    enhancedScore = 5.5 + Math.pow(enhancedScore - 5.5, exponentialFactor);
+  } else if (enhancedScore < 4.5) {
+    // Amplify poor investment opportunities (make them lower)
+    enhancedScore = 4.5 - Math.pow(4.5 - enhancedScore, exponentialFactor);
+  }
+  
+  // Ensure final score is between 1 and 10
+  enhancedScore = Math.max(1.0, Math.min(10.0, enhancedScore));
+  
+  return Math.round(enhancedScore * 10) / 10;
 }
 
 // Function to update country data
 function updateCountryData(country, newNews) {
   const timeGenerated = new Date().toISOString();
   
+  console.log(`Updating data for ${country} with ${newNews.length} news items`);
+  
   // Add new news to history
   newNews.forEach(news => {
+    console.log(`Processing news: ${news.news} - Industry: ${news.industry} - Scores: ${news.positivityScore}/${news.importanceScore}`);
     newsData.newsHistory.push({
       timeGenerated,
       country,
@@ -175,28 +342,80 @@ function updateCountryData(country, newNews) {
       industry: news.industry,
       link: news.link || '',
       effect: news.effect,
-      positivityScore: news.positivityScore,
-      importanceScore: news.importanceScore
+      positivityScore: parseFloat(news.positivityScore) || 5,
+      importanceScore: parseFloat(news.importanceScore) || 5
     });
   });
   
-  // Get all news for this country (no repeats)
-  const countryNews = newsData.newsHistory.filter(item => item.country === country);
+  // Get all news for this country from the past two weeks (no repeats)
+  const twoWeeksAgo = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString();
+  const countryNews = newsData.newsHistory
+    .filter(item => item.country === country && item.timeGenerated >= twoWeeksAgo)
+    .filter((item, index, self) => 
+      index === self.findIndex(t => t.newsTitle === item.newsTitle)
+    ); // Remove duplicates based on title
+  
+  console.log(`Found ${countryNews.length} news items for scoring calculation`);
   
   // Calculate scores
   const industryScores = calculateIndustryScores(countryNews);
   const overallScore = calculateOverallScore(industryScores);
   
-  // Get unique news titles for this country
-  const uniqueNewsTitles = [...new Set(countryNews.map(item => item.newsTitle))];
+  console.log(`Calculated scores for ${country}:`, industryScores);
+  console.log(`Overall score: ${overallScore}`);
   
-  // Update country data
+  // Group news by industry
+  const newsByIndustry = {};
+  INDUSTRIES.forEach(industry => {
+    newsByIndustry[industry] = [];
+  });
+  
+  // Categorize news by industry using the same matching logic as calculateIndustryScores
+  countryNews.forEach(news => {
+    if (news.industry) {
+      // Find matching industry (flexible matching)
+      let matchingIndustry = null;
+      
+      // First try exact match
+      if (INDUSTRIES.includes(news.industry)) {
+        matchingIndustry = news.industry;
+      } else {
+        // Try case-insensitive match
+        matchingIndustry = INDUSTRIES.find(industry => 
+          industry.toLowerCase() === news.industry.toLowerCase()
+        );
+      }
+      
+      // Try partial matching for industries with variations
+      if (!matchingIndustry) {
+        const industryLower = news.industry.toLowerCase();
+        matchingIndustry = INDUSTRIES.find(industry => {
+          const industryKeywords = industry.toLowerCase().split(/[\/\s-]+/);
+          return industryKeywords.some(keyword => 
+            industryLower.includes(keyword) || keyword.includes(industryLower)
+          );
+        });
+      }
+      
+      if (matchingIndustry) {
+        newsByIndustry[matchingIndustry].push({
+          title: news.newsTitle,
+          link: news.link,
+          positivityScore: news.positivityScore,
+          importanceScore: news.importanceScore,
+          effect: news.effect
+        });
+      }
+    }
+  });
+  
+  // Update country data with industry-specific news
   newsData.countries[country] = {
     name: country,
     lastUpdated: timeGenerated,
     overallScore,
     industryScores,
-    newsTitles: uniqueNewsTitles
+    industries: newsByIndustry // Add industry-specific news
   };
 }
 
@@ -263,16 +482,20 @@ function parseAnalysisResponse(response) {
   let currentImportance = null;
   let currentLink = null;
 
+  console.log('Parsing OpenAI response...');
+  console.log('Response preview:', response.substring(0, 500));
+
   for (const line of lines) {
     const trimmedLine = line.trim();
     
     // Handle markdown formatting with asterisks
     if (trimmedLine.startsWith('**Country:') || trimmedLine.startsWith('Country:')) {
       // Save previous entry if exists
-      if (currentCountry && currentNews) {
+      if (currentCountry && currentNews && currentIndustry) {
         if (!countries[currentCountry]) {
           countries[currentCountry] = [];
         }
+        console.log(`Adding news for ${currentCountry}: ${currentNews} (Industry: ${currentIndustry})`);
         countries[currentCountry].push({
           industry: currentIndustry,
           news: currentNews,
@@ -283,6 +506,14 @@ function parseAnalysisResponse(response) {
         });
       }
       
+      // Reset for new country
+      currentIndustry = null;
+      currentNews = null;
+      currentEffect = null;
+      currentPositivity = null;
+      currentImportance = null;
+      currentLink = null;
+      
       // Extract country name, handling both markdown and plain text
       let countryName = trimmedLine;
       if (trimmedLine.startsWith('**Country:')) {
@@ -290,14 +521,47 @@ function parseAnalysisResponse(response) {
       } else {
         countryName = trimmedLine.replace('Country:', '').trim();
       }
-      currentCountry = countryName;
-      currentIndustry = null;
-      currentNews = null;
-      currentEffect = null;
-      currentPositivity = null;
-      currentImportance = null;
-      currentLink = null;
+      
+      // Normalize country names to avoid duplicates
+      const countryMapping = {
+        'United States': 'US',
+        'United States of America': 'US',
+        'USA': 'US',
+        'People\'s Republic of China': 'China',
+        'South Korea': 'South Korea',
+        'Republic of Korea': 'South Korea',
+        'United Kingdom': 'United Kingdom',
+        'UK': 'United Kingdom',
+        'Great Britain': 'United Kingdom'
+      };
+      
+      currentCountry = countryMapping[countryName] || countryName;
+      console.log(`Found country: ${countryName} -> normalized to: ${currentCountry}`);
+      
     } else if (trimmedLine.startsWith('**Industry:') || trimmedLine.startsWith('Industry:')) {
+      // Save previous news item if we have one
+      if (currentNews && currentIndustry && currentCountry) {
+        if (!countries[currentCountry]) {
+          countries[currentCountry] = [];
+        }
+        console.log(`Adding news for ${currentCountry}: ${currentNews} (Industry: ${currentIndustry})`);
+        countries[currentCountry].push({
+          industry: currentIndustry,
+          news: currentNews,
+          effect: currentEffect,
+          positivityScore: currentPositivity,
+          importanceScore: currentImportance,
+          link: currentLink
+        });
+        
+        // Reset news fields but keep country
+        currentNews = null;
+        currentEffect = null;
+        currentPositivity = null;
+        currentImportance = null;
+        currentLink = null;
+      }
+      
       let industryName = trimmedLine;
       if (trimmedLine.startsWith('**Industry:')) {
         industryName = trimmedLine.replace('**Industry:', '').replace('**', '').trim();
@@ -305,6 +569,8 @@ function parseAnalysisResponse(response) {
         industryName = trimmedLine.replace('Industry:', '').trim();
       }
       currentIndustry = industryName;
+      console.log(`Found industry: ${currentIndustry}`);
+      
     } else if (trimmedLine.startsWith('**News headline') || trimmedLine.startsWith('News headline')) {
       let newsText = trimmedLine;
       if (trimmedLine.startsWith('**News headline')) {
@@ -336,6 +602,8 @@ function parseAnalysisResponse(response) {
         }
         currentLink = '';
       }
+      console.log(`Found news: ${currentNews}`);
+      
     } else if (trimmedLine.startsWith('**How does it affect') || trimmedLine.startsWith('How does it affect')) {
       let effectText = trimmedLine;
       if (trimmedLine.startsWith('**How does it affect')) {
@@ -344,20 +612,25 @@ function parseAnalysisResponse(response) {
         effectText = trimmedLine.replace('How does it affect the advertising business:', '').trim();
       }
       currentEffect = effectText;
+      
     } else if (trimmedLine.startsWith('**Positivity score') || trimmedLine.startsWith('Positivity score')) {
       const scoreMatch = trimmedLine.match(/(\d+)/);
       currentPositivity = scoreMatch ? parseInt(scoreMatch[1]) : null;
+      console.log(`Found positivity score: ${currentPositivity}`);
+      
     } else if (trimmedLine.startsWith('**Importance score') || trimmedLine.startsWith('Importance score')) {
       const scoreMatch = trimmedLine.match(/(\d+)/);
       currentImportance = scoreMatch ? parseInt(scoreMatch[1]) : null;
+      console.log(`Found importance score: ${currentImportance}`);
     }
   }
 
   // Save the last entry
-  if (currentCountry && currentNews) {
+  if (currentCountry && currentNews && currentIndustry) {
     if (!countries[currentCountry]) {
       countries[currentCountry] = [];
     }
+    console.log(`Adding final news for ${currentCountry}: ${currentNews} (Industry: ${currentIndustry})`);
     countries[currentCountry].push({
       industry: currentIndustry,
       news: currentNews,
@@ -368,6 +641,7 @@ function parseAnalysisResponse(response) {
     });
   }
 
+  console.log('Parsed countries:', Object.keys(countries));
   return countries;
 }
 
@@ -444,6 +718,9 @@ app.post('/api/news/update', async (req, res) => {
     const customRegions = regions || REGIONS;
     const customIndustries = industries || INDUSTRIES;
     
+    // Clean up duplicates before updating
+    cleanupDuplicateCountries();
+    
     const updatedData = await fetchNewsAnalysis(customRegions, customIndustries);
     
     res.json({
@@ -459,12 +736,38 @@ app.post('/api/news/update', async (req, res) => {
   }
 });
 
+// Clean up duplicate countries endpoint
+app.post('/api/news/cleanup', (req, res) => {
+  try {
+    cleanupDuplicateCountries();
+    res.json({
+      success: true,
+      message: 'Duplicate countries cleaned up successfully'
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 // Get available regions
 app.get('/api/regions', (req, res) => {
   res.json({
     success: true,
     data: REGIONS,
     message: 'Available regions retrieved successfully'
+  });
+});
+
+// Get countries with actual data
+app.get('/api/countries-with-data', (req, res) => {
+  const countriesWithData = Object.keys(newsData.countries || {});
+  res.json({
+    success: true,
+    data: countriesWithData,
+    message: 'Countries with data retrieved successfully'
   });
 });
 
@@ -619,8 +922,8 @@ app.use('*', (req, res) => {
   });
 });
 
-// Schedule automatic news updates (every 6 hours)
-cron.schedule('0 */6 * * *', async () => {
+// Schedule automatic news updates (every 12 hours)
+cron.schedule('0 */12 * * *', async () => {
   try {
     await fetchNewsAnalysis();
     console.log('Scheduled news update completed');
@@ -629,15 +932,21 @@ cron.schedule('0 */6 * * *', async () => {
   }
 });
 
-// Initial data fetch on server start
-fetchNewsAnalysis()
-  .then(() => {
-    console.log('Initial news data fetch completed successfully');
-  })
-  .catch((error) => {
-    console.error('Initial news data fetch failed:', error);
-    console.log('Server will continue running with empty news data');
-  });
+// Initial data fetch on server start (now optional since we have pre-loaded data)
+if (Object.keys(newsData.countries).length === 0) {
+  console.log('📡 No initial data found, fetching from OpenAI...');
+  fetchNewsAnalysis()
+    .then(() => {
+      console.log('Initial news data fetch completed successfully');
+    })
+    .catch((error) => {
+      console.error('Initial news data fetch failed:', error);
+      console.log('Server will continue running with pre-loaded initial data');
+    });
+} else {
+  console.log('📋 Using pre-loaded initial news data');
+  console.log('🔄 OpenAI updates will still run on schedule every 12 hours');
+}
 
 // Start server only if this is the main module (not when imported for testing)
 if (import.meta.url === `file://${process.argv[1]}`) {

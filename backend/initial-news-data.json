@@ -1,0 +1,1496 @@
+{
+  "lastUpdated": "2025-07-23T15:30:23.224Z",
+  "countries": {
+    "US": {
+      "name": "US",
+      "lastUpdated": "2025-07-23T15:50:17.056Z",
+      "overallScore": 7.4,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 3,
+          "importanceScore": 7,
+          "averageScore": 4.8
+        },
+        "retail": {
+          "positivityScore": 8,
+          "importanceScore": 8.1,
+          "averageScore": 8.4
+        },
+        "ticketing/events": {
+          "positivityScore": 7,
+          "importanceScore": 6,
+          "averageScore": 6.6
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [
+          {
+            "title": "U.S. apparel imports from China fall to 22-year low amid steep tariffs",
+            "link": "https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/",
+            "positivityScore": 3,
+            "importanceScore": 7,
+            "effect": "Record trade barriers (tariffs up to 145%) led U.S. clothing imports from China to plunge **25% year-on-year** to just $556M in May 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/#:~:text=In%20May%202025%2C%20U,S)).  Retailers are aggressively shifting sourcing to Vietnam (+29%), India, Bangladesh and Mexico (+12%) ([www.reuters.com](https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/#:~:text=retailers%20to%20shift%20sourcing%20to,saw%20gains%2C%20with%20apparel%20imports)).  This supply-chain shift means many brands will relaunch “Made in Vietnam/Mexico” products.  Advertisers should pivot campaigns toward locally-made or new-source apparel lines.  The upheaval may hurt promotions of Chinese-made fast-fashion, but create new ad narratives (e.g. “made closer to home”)."
+          }
+        ],
+        "retail": [
+          {
+            "title": "US economic activity up but outlook remains pessimistic, Fed says",
+            "link": "https://www.reuters.com/business/us-economic-activity-up-outlook-pessimistic-fed-says-2025-07-16/",
+            "positivityScore": 10,
+            "importanceScore": 10,
+            "effect": "The Fed’s latest Beige Book notes rising costs from tariffs and slowing growth ([www.reuters.com](https://www.reuters.com/business/us-economic-activity-up-outlook-pessimistic-fed-says-2025-07-16/#:~:text=The%20Federal%20Reserve%27s%20Beige%20Book,consumer%20prices%20by%20late%20summer)).  Businesses are raising prices and delaying spending amid uncertainty, which likely curbs consumer demand and forces retailers to trim marketing budgets.  In short, tougher conditions and higher costs tend to dampen ad spending (especially in retail media)."
+          },
+          {
+            "title": "Fed’s Waller again makes case for July interest rate cut",
+            "link": "https://www.reuters.com/business/feds-waller-again-makes-case-july-interest-rate-cut-2025-07-17/",
+            "positivityScore": 6,
+            "importanceScore": 7,
+            "effect": "Fed Governor Waller signaled that economic growth is slowing and supported a rate cut ([www.reuters.com](https://www.reuters.com/business/feds-waller-again-makes-case-july-interest-rate-cut-2025-07-17/#:~:text=Federal%20Reserve%20Governor%20Christopher%20Waller,He%20argued%20that%20the%20current)).  If interest rates are indeed cut soon, consumer spending could get a modest boost – which would help retailers and advertisers.  However, Waller’s comments underscore lingering weakness (job risks, tariff pressures), suggesting firms may remain cautious with ad budgets.  Overall, the move toward easier policy is mildly positive for ad spending."
+          },
+          {
+            "title": "Fed's rate-cut delay intact as inflation fears override Trump pressure",
+            "link": "https://www.reuters.com/business/feds-rate-cut-delay-intact-inflation-fears-override-trump-pressure-2025-07-18/",
+            "positivityScore": 10,
+            "importanceScore": 10,
+            "effect": "The Fed’s decision to hold rates high amid rising inflation pressures suggests tighter monetary conditions ahead. Higher borrowing costs and slower growth can dampen consumer spending, causing companies to tighten marketing budgets. Advertisers may face cutbacks in planned campaigns as businesses prioritize cost control under the Fed’s steady-rate policy."
+          },
+          {
+            "title": "US retail sales beat expectations in June",
+            "link": "https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/",
+            "positivityScore": 7,
+            "importanceScore": 7,
+            "effect": "Strong retail sales signal robust consumer demand, encouraging retailers and consumer brands to invest more in promotions and marketing. This positive consumer spending trend is likely to boost advertising budgets, as companies ramp up campaigns to capture the increased retail momentum."
+          },
+          {
+            "title": "Wall St edges up as strong retail sales data, earnings lift sentiment",
+            "link": "https://www.reuters.com/business/wall-st-edges-up-strong-retail-sales-data-earnings-lift-sentiment-2025-07-17/",
+            "positivityScore": 6,
+            "importanceScore": 6,
+            "effect": "U.S. stocks rising on good retail results and earnings suggests some consumer and business confidence. Advertisers see this as a moderately positive signal that demand is holding up. However, mixed signals on tariffs and inflation mean companies may remain cautious, so any boost to ad spending is likely modest rather than dramatic."
+          },
+          {
+            "title": "US weekly jobless claims fall; job growth appears steady in July",
+            "link": "https://www.reuters.com/business/us-weekly-jobless-claims-fall-job-growth-appears-steady-july-2025-07-17/",
+            "positivityScore": 7,
+            "importanceScore": 6,
+            "effect": "A steady or improving job market supports consumer spending power, which is generally good for retailers and brands. When employment is strong, consumers may spend more freely, giving advertisers confidence. This stability is a positive for ad revenues, as marketing budgets are less likely to be cut when the economic outlook is solid."
+          }
+        ],
+        "ticketing/events": []
+      }
+    },
+    "United Kingdom": {
+      "name": "United Kingdom",
+      "lastUpdated": "2025-07-23T13:48:41.375Z",
+      "overallScore": 5.3,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 3.7,
+          "importanceScore": 7,
+          "averageScore": 5.3
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "UK consumer price inflation hits 3.6% in June 2025, highest since Jan 2024",
+            "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/uk-cpi-inflation-rises-36-june-2025-07-16/",
+            "positivityScore": 2,
+            "importanceScore": 8,
+            "effect": "UK inflation jumped unexpectedly, driven by higher energy and food prices ([www.reuters.com](https://www.reuters.com/sustainability/sustainable-finance-reporting/uk-cpi-inflation-rises-36-june-2025-07-16/#:~:text=UK%20consumer%20price%20inflation%20rose,UK%20remains%20higher%20than%20in)). This squeezes household budgets and erodes confidence, making consumers more price-sensitive.  Advertisers in retail and consumer sectors may need to cut back on ad spending or shift focus to promotions as consumer demand softens.  High inflation also delays the Bank of England from cutting rates, keeping borrowing costs higher for businesses. Overall, this environment is negative for ad growth."
+          },
+          {
+            "title": "UK grocery inflation jumps to 5.2% in four weeks to July 13",
+            "link": "https://www.reuters.com/business/retail-consumer/uk-grocery-inflation-jumps-52-four-weeks-july-13-2025-07-22/",
+            "positivityScore": 3,
+            "importanceScore": 7,
+            "effect": "Rapidly rising grocery prices squeeze household budgets, leaving less for discretionary purchases. Retailers outside food may see weaker sales, prompting them to cut promotions. Advertisers in non-essential sectors may face reduced spend as consumer focus shifts to essentials, making this inflation surge negative for ad demand."
+          },
+          {
+            "title": "UK wage growth slows but job losses 'less alarming'",
+            "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/uk-wage-growth-slightly-higher-than-expected-50-3-months-may-2025-07-17/",
+            "positivityScore": 6,
+            "importanceScore": 6,
+            "effect": "Slower wage growth means consumers have less additional spending power, but the labour market remains relatively stable. This mixed picture suggests consumer demand is cautious but not collapsing. Advertisers may see advertising budgets hold steady rather than grow, as retailers remain careful about expanding marketing under these conditions."
+          }
+        ],
+        "ticketing/events": []
+      }
+    },
+    "Italy": {
+      "name": "Italy",
+      "lastUpdated": "2025-07-23T13:17:03.314Z",
+      "overallScore": 5,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 2.5,
+          "importanceScore": 7.5,
+          "averageScore": 5
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "Italy warns of risks from U.S. tariffs and weak dollar at G7 meeting",
+            "link": "https://www.reuters.com/markets/us/italy-g7-warns-about-risks-trade-tensions-dollar-weakening-2025-07-18/",
+            "positivityScore": 2,
+            "importanceScore": 7,
+            "effect": "Italy’s finance chief cautioned that new U.S. tariffs on EU goods (30% on Mexico/EU) and a weakening dollar threaten output ([www.reuters.com](https://www.reuters.com/markets/us/italy-g7-warns-about-risks-trade-tensions-dollar-weakening-2025-07-18/#:~:text=tensions%20and%20a%20weakening%20U,follows%20unsuccessful%20trade%20negotiations%20and)). Such trade friction is likely to slow economic growth and export demand.  For the advertising sector, a downturn means clients (from retail to automotive to manufacturing) have tighter budgets and may trim marketing spend.  Tariffs and uncertainty also raise input costs for many industries, which typically leads firms to cut discretionary spending like ads."
+          },
+          {
+            "title": "Italy at G7 warns about risks of trade tensions, dollar weakening",
+            "link": "https://www.reuters.com/markets/us/italy-g7-warns-about-risks-trade-tensions-dollar-weakening-2025-07-18/",
+            "positivityScore": 3,
+            "importanceScore": 8,
+            "effect": "Italy’s emphasis on looming U.S. tariffs and trade uncertainty underscores potential economic headwinds. Concerns about higher import costs and a weaker euro can dampen consumer confidence and spending. Italian advertisers may see clients tighten budgets in anticipation of slower growth, which is negative for the ad market."
+          }
+        ],
+        "ticketing/events": []
+      }
+    },
+    "Australia": {
+      "name": "Australia",
+      "lastUpdated": "2025-07-23T13:17:03.314Z",
+      "overallScore": 5.5,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 4.5,
+          "importanceScore": 6.5,
+          "averageScore": 5.5
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "Australia central bank holds interest rate, says prudent to await more data",
+            "link": "https://www.reuters.com/world/asia-pacific/australia-central-bank-wary-cutting-rates-too-quickly-prudent-await-more-data-2025-07-22/",
+            "positivityScore": 3,
+            "importanceScore": 6,
+            "effect": "The Reserve Bank of Australia unexpectedly left rates unchanged, citing a sharp drop in inflation and sluggish growth ([www.reuters.com](https://www.reuters.com/world/asia-pacific/australia-central-bank-wary-cutting-rates-too-quickly-prudent-await-more-data-2025-07-22/#:~:text=The%20Reserve%20Bank%20of%20Australia,and%20gradual%20approach%2C%20noting%20uncertainty)). This implies the economy isn’t overheating, but also not strong enough to warrant cuts.  Weak consumption suggests retailers and advertisers face soft demand at home. In this cautionary climate, companies may delay big marketing campaigns.  The overall impact on advertising is slightly negative, as spending is likely subdued until signs of a turnaround emerge."
+          },
+          {
+            "title": "Australia central bank wary of cutting rates too quickly, prudent to await more data",
+            "link": "https://www.reuters.com/world/asia-pacific/australia-central-bank-wary-cutting-rates-too-quickly-prudent-await-more-data-2025-07-22/",
+            "positivityScore": 6,
+            "importanceScore": 7,
+            "effect": "The RBA’s decision to hold rates steady reflects confidence inflation is moderating. A neutral rate stance keeps borrowing costs in check, which may support consumer spending. This cautious approach could sustain current ad budgets rather than trigger cuts, providing a modestly positive backdrop for Australian advertisers."
+          }
+        ],
+        "ticketing/events": []
+      }
+    },
+    "France": {
+      "name": "France",
+      "lastUpdated": "2025-07-23T15:30:23.224Z",
+      "overallScore": 3.8,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 2,
+          "importanceScore": 8,
+          "averageScore": 4.8
+        },
+        "retail": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [
+          {
+            "title": "France moves to ban advertising of ‘ultra-fast fashion’ under new eco law",
+            "link": "https://www.marieclaire.co.uk/fashion/france-fast-fashion-ban",
+            "positivityScore": 2,
+            "importanceScore": 8,
+            "effect": "France’s new sustainability bill would **criminalize promotions of ultra-fast fashion** brands (e.g. Shein, Temu) ([www.marieclaire.co.uk](https://www.marieclaire.co.uk/fashion/france-fast-fashion-ban#:~:text=France%20has%20taken%20a%20significant,Based)) ([www.marieclaire.co.uk](https://www.marieclaire.co.uk/fashion/france-fast-fashion-ban#:~:text=discards%2035%20clothing%20items%20every,While)).  It ties an “eco-score” to garments and aims to levy taxes up to €10 or 50% of price by 2030.  In practice, influencer and display ads for cheap throwaway fashion would be banned ([www.marieclaire.co.uk](https://www.marieclaire.co.uk/fashion/france-fast-fashion-ban#:~:text=discards%2035%20clothing%20items%20every,While)).  Advertisers in France must now pivot away from marketing ultra-fast fashion towards more ESG-friendly lines.  Budget should shift into promoting sustainable/slow-fashion brands, recycling/reuse campaigns, or local/responsible manufacturers, per the regulation’s intent."
+          }
+        ],
+        "retail": [],
+        "ticketing/events": []
+      }
+    },
+    "Spain": {
+      "name": "Spain",
+      "lastUpdated": "2025-07-23T15:30:23.223Z",
+      "overallScore": 7.3,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 8,
+          "importanceScore": 6,
+          "averageScore": 7.1
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "ticketing/events": {
+          "positivityScore": 5.3,
+          "importanceScore": 6.7,
+          "averageScore": 6
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [
+          {
+            "title": "Beauty firm Puig's quarterly sales rise a steady 8%",
+            "link": "https://www.reuters.com/markets/europe/puig-posts-8-rise-q2-sales-2025-07-16/#:~:text=Spanish%20beauty%20company%20Puig%2C%20known,Chairman%20and%20CEO%20Marc%20Puig",
+            "positivityScore": 8,
+            "importanceScore": 6,
+            "effect": "Strong performance by Puig (brands like Carolina Herrera) shows robust beauty demand.  Q2 sales hit €1.09 billion, up 8% YoY ([www.reuters.com](https://www.reuters.com/markets/europe/puig-posts-8-rise-q2-sales-2025-07-16/#:~:text=Spanish%20beauty%20company%20Puig%2C%20known,Despite)), with double-digit gains in Asia (+19.5% ([www.reuters.com](https://www.reuters.com/markets/europe/puig-posts-8-rise-q2-sales-2025-07-16/#:~:text=facing%20potential%20challenges%2C%20including%20increased,increase))) and Americas (+10%).  This indicates growth in beauty advertising opportunities in Spain and abroad as global demand for premium cosmetics rises.  Beauty marketers may increase spend especially in high-growth regions noted."
+          }
+        ],
+        "clothing/apparel": [],
+        "retail": [],
+        "ticketing/events": [
+          {
+            "title": "Spain’s tourism sector still growing, but summer sales slow to +2.7%",
+            "link": "https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/",
+            "positivityScore": 6,
+            "importanceScore": 7,
+            "effect": "Despite record visitor totals, Spain’s tourism revenue growth is cooling.  Industry group Exceltur projects **+2.7% sales in Q3’25** (versus +6.3% in Q3’24) ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=Spain%27s%20tourism%20sector%20anticipates%20a,the%20same%20period%20in%202024%E2%80%94while)).  Still, roughly **100 million tourists** are expected in 2025, contributing ~13.2% of GDP ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=destinations%20other%20than%20the%20U,in%20the%20sector%20has%20diminished)).  Growth in spend from UK, U.S., Japan and China is slower but positive; EU/Eurozone visitors (Germany, France) are weak ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=numbers%20are%20still%20expected,the%20continent%20and%20Asians%20choosing)).  Advertisers should moderate expectations: allocate to tourism campaigns but focus on existing tourists and high-value segments (luxury travel, domestic holidays).  Emphasize experiences and promotions that capture the large visitor base, even as overall growth eases."
+          },
+          {
+            "title": "Spain's tourism sector expects slowdown in summer sales",
+            "link": "https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/",
+            "positivityScore": 5,
+            "importanceScore": 6,
+            "effect": "Spain foresees record visitor numbers in 2025, but summer revenue growth is expected to slow to +2.7% year-on-year (versus +6.3% last year) ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=numbers%20are%20still%20expected,the%20same%20period%20in%202024%E2%80%94while)).  Inbound tourism is still rising (especially from U.S., Japan, China), but growth is moderating.  Advertisers should note that demand remains high overall, yet competitive intensity could increase. If planning ad spend, emphasize targeting the remaining growth markets (North America, Asia) and consider local promotions to offset any drop in European visitors.  The slowdown suggests a careful approach: mainstream campaigns may yield less incremental impact, but niche marketing (luxury, regional tourism) could still pay off."
+          },
+          {
+            "title": "Spain’s tourism revenue growth to slow to 2.7% in Q3, but record visitor numbers still expected",
+            "link": "https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/",
+            "positivityScore": 5,
+            "importanceScore": 7,
+            "effect": "Spain’s tourism group forecasts Q3 2025 tourism revenue up 2.7% YoY (down from 6.3% a year earlier), even as tourist volumes hit new highs ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=Spain%27s%20tourism%20sector%20anticipates%20a,the%20same%20period%20in%202024%E2%80%94while)).  Spending growth will moderate due to global uncertainties, though visitors from the U.S., UK, Japan and China are still rising.  For marketers, this suggests the Spanish market remains large but competitive.  Advertisers should continue campaigns (targeting international travelers and high-value segments) but be prepared for diminishing returns; focusing ads on travel-spending incentives and local promotions could help capture the more cautious tourist."
+          }
+        ]
+      }
+    },
+    "Mexico": {
+      "name": "Mexico",
+      "lastUpdated": "2025-07-23T15:30:23.223Z",
+      "overallScore": 7.9,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 6.3,
+          "importanceScore": 7,
+          "averageScore": 6.8
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "Mexico retailers poised for Q2 bump despite inflation rebound",
+            "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/",
+            "positivityScore": 8,
+            "importanceScore": 8,
+            "effect": "Analysts expect Mexican retailers to report strong Q2 results driven by factors like Easter timing and bonus payouts.  Walmart de México (Walmex) is forecast to see ~9% revenue growth (and 5% profit growth) year-over-year ([www.reuters.com](https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/#:~:text=and%20Liverpool%20are%20expected%20to,persistent%20inflation%20by%20promoting%20private)).  Discretionary categories (clothing, electronics) are driving this bump.  This points to rising consumer spending power, so advertisers should increase marketing spend in Mexico on retail channels.  Investment in promotions, loyalty programs and targeted digital ads could capture the upswing in foot traffic and online buying."
+          },
+          {
+            "title": "Walmart Mexico's profit dips 10% after tepid consumption growth",
+            "link": "https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/",
+            "positivityScore": 5,
+            "importanceScore": 6,
+            "effect": "Walmex reported an 8% sales increase in Q2 but net profit fell 10% to 11.23B pesos ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,598%20million%29%2C%20underperforming%20the)).  This suggests revenue is growing but margins are squeezed by stubborn inflation and cautious consumer spending.  For marketers, it signals mixed conditions: there is demand (sales up) but consumers are price-sensitive. Advertising should focus on value messaging (e.g. discounts, private labels) rather than broad spending increases.  Expansion (25 new stores) provides opportunities for local advertising, but overall budgets may be carefully targeted given the profit softness."
+          },
+          {
+            "title": "Walmart Mexico Q2 sales rise 8% despite profit falling; 25 new stores opened",
+            "link": "https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/",
+            "positivityScore": 6,
+            "importanceScore": 7,
+            "effect": "Walmart’s Mexico unit (Walmex) reported an 8% year-on-year sales increase in Q2 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,25)).  Growth was driven by promotions around the Hot Sale and Father’s Day; the company opened 25 new stores (mostly discount Bodega Aurrera and Sam’s Club locations) ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=profit,for%20enhanced%20price%20perception%20and)).  The profit dip (–10%) was blamed on slow consumer confidence, but higher sales and store expansion signal that retailers are still vying for market share.  For advertisers, this means Mexico’s retail market is expanding – brands should invest more in marketing to capture budget-conscious shoppers and to promote new store openings."
+          }
+        ],
+        "ticketing/events": []
+      }
+    },
+    "India": {
+      "name": "India",
+      "lastUpdated": "2025-07-23T14:50:51.957Z",
+      "overallScore": 5,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 2,
+          "importanceScore": 8,
+          "averageScore": 5
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "India's cooling inflation prompts rate cut calls, raises concerns over weakening domestic demand",
+            "link": "https://www.reuters.com/world/india/indias-cooling-inflation-prompts-rate-cut-calls-raises-concerns-over-weakening-2025-07-15/",
+            "positivityScore": 2,
+            "importanceScore": 8,
+            "effect": "India’s retail inflation fell to a six-year low in June, largely because of weak domestic demand. Car sales hit an 18-month low and home sales plunged 20% ([www.reuters.com](https://www.reuters.com/world/india/indias-cooling-inflation-prompts-rate-cut-calls-raises-concerns-over-weakening-2025-07-15/#:~:text=disinflation%20is%20largely%20driven%20by,June%20quarter.%20Urban%20consumption)).  In other words, consumers are cutting back, and wage growth is stagnant.  This is negative for advertisers: brands may need to hold budgets steady or optimize spending rather than expand.  Campaigns should focus on value and essentials (not luxury).  Overall, advertising investment in India should be conservative until consumer sentiment improves."
+          }
+        ],
+        "ticketing/events": []
+      }
+    },
+    "Brazil": {
+      "name": "Brazil",
+      "lastUpdated": "2025-07-23T14:50:51.957Z",
+      "overallScore": 5,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 3,
+          "importanceScore": 7,
+          "averageScore": 5
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "Brazil's monthly inflation forecast to have slowed further in June",
+            "link": "https://www.reuters.com/world/americas/brazils-monthly-inflation-forecast-have-slowed-further-june-2025-07-09/",
+            "positivityScore": 3,
+            "importanceScore": 7,
+            "effect": "Brazil saw a further slowdown in monthly inflation to +0.20% in June (from 0.26% in May) ([www.reuters.com](https://www.reuters.com/world/americas/brazils-monthly-inflation-forecast-have-slowed-further-june-2025-07-09/#:~:text=Brazil%27s%20monthly%20inflation%20is%20expected,significantly%20above%20the)), thanks to cheaper fuel, though annual inflation remains high (~5.3%).  Slowing prices can support consumer spending, which is positive. However, persistent inflation (especially in essentials like electricity) means budgets are still tight. Advertisers should note moderate improvement in affordability, so campaigns that promote deals or financing (instalments) could resonate. Overall, expect cautious optimism: the environment is stabilizing, but not yet a boom."
+          }
+        ],
+        "ticketing/events": []
+      }
+    },
+    "Netherlands": {
+      "name": "Netherlands",
+      "lastUpdated": "2025-07-23T14:57:15.972Z",
+      "overallScore": 4.5,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 3,
+          "importanceScore": 6,
+          "averageScore": 4.5
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "Dutch growth forecast cut to 1.7% in 2025, U.S. trade tariffs weighing",
+            "link": "https://www.reuters.com/markets/europe/dutch-economic-growth-set-slow-trade-tariffs-bite-2025-07-10/",
+            "positivityScore": 3,
+            "importanceScore": 6,
+            "effect": "Government advisers now expect the Netherlands to grow only ~1.7% in 2025 (down from 1.9%) due to U.S. tariffs impacting exports ([www.reuters.com](https://www.reuters.com/markets/europe/dutch-economic-growth-set-slow-trade-tariffs-bite-2025-07-10/#:~:text=According%20to%20a%20report%20by,previous%20estimates%2C%20which%20anticipated%20growth)).  Slower economic expansion suggests Dutch consumers may tighten spending ahead.  For advertisers, this is a warning sign: budgets might flatten or shrink, especially in export-oriented and industrial sectors.  Investment in performance marketing and targeted local campaigns could mitigate.  Still, any stabilization (e.g. sticking to Internet ads) is key, as basic 1–2% growth still means consumers spend, albeit more cautiously."
+          }
+        ],
+        "ticketing/events": []
+      }
+    },
+    "China": {
+      "name": "China",
+      "lastUpdated": "2025-07-23T15:30:23.223Z",
+      "overallScore": 10,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 9,
+          "importanceScore": 8,
+          "averageScore": 8.7
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "Economists urge Chinese local govts to target consumption to drive growth",
+            "link": "https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/#:~:text=consumption%20over%20traditional%20growth%20strategies,the%20first%20half%20of%20the",
+            "positivityScore": 9,
+            "importanceScore": 8,
+            "effect": "This policy push signals a major boost in Chinese retail demand – annual retail sales are projected to exceed ¥50 trillion (~$6.97 trillion) in 2025 ([www.reuters.com](https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/#:~:text=Commerce%20Minister%20Wang%20Wentao%20acknowledged,are%20intensifying%20calls%20to%20make)).  More consumer spending means retailers and brand advertisers will likely increase marketing budgets to capture rising demand, especially in ecommerce and consumer goods."
+          }
+        ],
+        "ticketing/events": []
+      }
+    }
+  },
+  "newsHistory": [
+    {
+      "timeGenerated": "2025-07-23T13:16:53.606Z",
+      "country": "US",
+      "newsTitle": "US economic activity up but outlook remains pessimistic, Fed says",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/us-economic-activity-up-outlook-pessimistic-fed-says-2025-07-16/",
+      "effect": "The Fed’s latest Beige Book notes rising costs from tariffs and slowing growth ([www.reuters.com](https://www.reuters.com/business/us-economic-activity-up-outlook-pessimistic-fed-says-2025-07-16/#:~:text=The%20Federal%20Reserve%27s%20Beige%20Book,consumer%20prices%20by%20late%20summer)).  Businesses are raising prices and delaying spending amid uncertainty, which likely curbs consumer demand and forces retailers to trim marketing budgets.  In short, tougher conditions and higher costs tend to dampen ad spending (especially in retail media).",
+      "positivityScore": 10,
+      "importanceScore": 10
+    },
+    {
+      "timeGenerated": "2025-07-23T13:16:53.606Z",
+      "country": "US",
+      "newsTitle": "Fed’s Waller again makes case for July interest rate cut",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/feds-waller-again-makes-case-july-interest-rate-cut-2025-07-17/",
+      "effect": "Fed Governor Waller signaled that economic growth is slowing and supported a rate cut ([www.reuters.com](https://www.reuters.com/business/feds-waller-again-makes-case-july-interest-rate-cut-2025-07-17/#:~:text=Federal%20Reserve%20Governor%20Christopher%20Waller,He%20argued%20that%20the%20current)).  If interest rates are indeed cut soon, consumer spending could get a modest boost – which would help retailers and advertisers.  However, Waller’s comments underscore lingering weakness (job risks, tariff pressures), suggesting firms may remain cautious with ad budgets.  Overall, the move toward easier policy is mildly positive for ad spending.",
+      "positivityScore": 6,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T13:16:53.607Z",
+      "country": "United Kingdom",
+      "newsTitle": "UK consumer price inflation hits 3.6% in June 2025, highest since Jan 2024",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/uk-cpi-inflation-rises-36-june-2025-07-16/",
+      "effect": "UK inflation jumped unexpectedly, driven by higher energy and food prices ([www.reuters.com](https://www.reuters.com/sustainability/sustainable-finance-reporting/uk-cpi-inflation-rises-36-june-2025-07-16/#:~:text=UK%20consumer%20price%20inflation%20rose,UK%20remains%20higher%20than%20in)). This squeezes household budgets and erodes confidence, making consumers more price-sensitive.  Advertisers in retail and consumer sectors may need to cut back on ad spending or shift focus to promotions as consumer demand softens.  High inflation also delays the Bank of England from cutting rates, keeping borrowing costs higher for businesses. Overall, this environment is negative for ad growth.",
+      "positivityScore": 2,
+      "importanceScore": 8
+    },
+    {
+      "timeGenerated": "2025-07-23T13:16:53.607Z",
+      "country": "Italy",
+      "newsTitle": "Italy warns of risks from U.S. tariffs and weak dollar at G7 meeting",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/markets/us/italy-g7-warns-about-risks-trade-tensions-dollar-weakening-2025-07-18/",
+      "effect": "Italy’s finance chief cautioned that new U.S. tariffs on EU goods (30% on Mexico/EU) and a weakening dollar threaten output ([www.reuters.com](https://www.reuters.com/markets/us/italy-g7-warns-about-risks-trade-tensions-dollar-weakening-2025-07-18/#:~:text=tensions%20and%20a%20weakening%20U,follows%20unsuccessful%20trade%20negotiations%20and)). Such trade friction is likely to slow economic growth and export demand.  For the advertising sector, a downturn means clients (from retail to automotive to manufacturing) have tighter budgets and may trim marketing spend.  Tariffs and uncertainty also raise input costs for many industries, which typically leads firms to cut discretionary spending like ads.",
+      "positivityScore": 2,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T13:16:53.607Z",
+      "country": "Australia",
+      "newsTitle": "Australia central bank holds interest rate, says prudent to await more data",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/world/asia-pacific/australia-central-bank-wary-cutting-rates-too-quickly-prudent-await-more-data-2025-07-22/",
+      "effect": "The Reserve Bank of Australia unexpectedly left rates unchanged, citing a sharp drop in inflation and sluggish growth ([www.reuters.com](https://www.reuters.com/world/asia-pacific/australia-central-bank-wary-cutting-rates-too-quickly-prudent-await-more-data-2025-07-22/#:~:text=The%20Reserve%20Bank%20of%20Australia,and%20gradual%20approach%2C%20noting%20uncertainty)). This implies the economy isn’t overheating, but also not strong enough to warrant cuts.  Weak consumption suggests retailers and advertisers face soft demand at home. In this cautionary climate, companies may delay big marketing campaigns.  The overall impact on advertising is slightly negative, as spending is likely subdued until signs of a turnaround emerge.",
+      "positivityScore": 3,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T13:17:03.314Z",
+      "country": "US",
+      "newsTitle": "Fed's rate-cut delay intact as inflation fears override Trump pressure",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/feds-rate-cut-delay-intact-inflation-fears-override-trump-pressure-2025-07-18/",
+      "effect": "The Fed’s decision to hold rates high amid rising inflation pressures suggests tighter monetary conditions ahead. Higher borrowing costs and slower growth can dampen consumer spending, causing companies to tighten marketing budgets. Advertisers may face cutbacks in planned campaigns as businesses prioritize cost control under the Fed’s steady-rate policy.",
+      "positivityScore": 10,
+      "importanceScore": 10
+    },
+    {
+      "timeGenerated": "2025-07-23T13:17:03.314Z",
+      "country": "US",
+      "newsTitle": "US retail sales beat expectations in June",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/",
+      "effect": "Strong retail sales signal robust consumer demand, encouraging retailers and consumer brands to invest more in promotions and marketing. This positive consumer spending trend is likely to boost advertising budgets, as companies ramp up campaigns to capture the increased retail momentum.",
+      "positivityScore": 7,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T13:17:03.314Z",
+      "country": "US",
+      "newsTitle": "Wall St edges up as strong retail sales data, earnings lift sentiment",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/wall-st-edges-up-strong-retail-sales-data-earnings-lift-sentiment-2025-07-17/",
+      "effect": "U.S. stocks rising on good retail results and earnings suggests some consumer and business confidence. Advertisers see this as a moderately positive signal that demand is holding up. However, mixed signals on tariffs and inflation mean companies may remain cautious, so any boost to ad spending is likely modest rather than dramatic.",
+      "positivityScore": 6,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T13:17:03.314Z",
+      "country": "US",
+      "newsTitle": "US weekly jobless claims fall; job growth appears steady in July",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/us-weekly-jobless-claims-fall-job-growth-appears-steady-july-2025-07-17/",
+      "effect": "A steady or improving job market supports consumer spending power, which is generally good for retailers and brands. When employment is strong, consumers may spend more freely, giving advertisers confidence. This stability is a positive for ad revenues, as marketing budgets are less likely to be cut when the economic outlook is solid.",
+      "positivityScore": 7,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T13:17:03.314Z",
+      "country": "United Kingdom",
+      "newsTitle": "UK grocery inflation jumps to 5.2% in four weeks to July 13",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/retail-consumer/uk-grocery-inflation-jumps-52-four-weeks-july-13-2025-07-22/",
+      "effect": "Rapidly rising grocery prices squeeze household budgets, leaving less for discretionary purchases. Retailers outside food may see weaker sales, prompting them to cut promotions. Advertisers in non-essential sectors may face reduced spend as consumer focus shifts to essentials, making this inflation surge negative for ad demand.",
+      "positivityScore": 3,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T13:17:03.314Z",
+      "country": "United Kingdom",
+      "newsTitle": "UK wage growth slows but job losses 'less alarming'",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/uk-wage-growth-slightly-higher-than-expected-50-3-months-may-2025-07-17/",
+      "effect": "Slower wage growth means consumers have less additional spending power, but the labour market remains relatively stable. This mixed picture suggests consumer demand is cautious but not collapsing. Advertisers may see advertising budgets hold steady rather than grow, as retailers remain careful about expanding marketing under these conditions.",
+      "positivityScore": 6,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T13:17:03.314Z",
+      "country": "Italy",
+      "newsTitle": "Italy at G7 warns about risks of trade tensions, dollar weakening",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/markets/us/italy-g7-warns-about-risks-trade-tensions-dollar-weakening-2025-07-18/",
+      "effect": "Italy’s emphasis on looming U.S. tariffs and trade uncertainty underscores potential economic headwinds. Concerns about higher import costs and a weaker euro can dampen consumer confidence and spending. Italian advertisers may see clients tighten budgets in anticipation of slower growth, which is negative for the ad market.",
+      "positivityScore": 3,
+      "importanceScore": 8
+    },
+    {
+      "timeGenerated": "2025-07-23T13:17:03.314Z",
+      "country": "Australia",
+      "newsTitle": "Australia central bank wary of cutting rates too quickly, prudent to await more data",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/world/asia-pacific/australia-central-bank-wary-cutting-rates-too-quickly-prudent-await-more-data-2025-07-22/",
+      "effect": "The RBA’s decision to hold rates steady reflects confidence inflation is moderating. A neutral rate stance keeps borrowing costs in check, which may support consumer spending. This cautious approach could sustain current ad budgets rather than trigger cuts, providing a modestly positive backdrop for Australian advertisers.",
+      "positivityScore": 6,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T13:48:41.375Z",
+      "country": "US",
+      "newsTitle": "U.S. online spending surges 30% to $24.1B during mid-year sale",
+      "industry": "Retail (E-commerce)",
+      "link": "https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/",
+      "effect": "Major online retailers (Amazon, Walmart, Target, etc.) drove a **30.3% year-on-year jump** in U.S. web sales to $24.1B over July 8–11, 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=U,to)).  This shows consumers snapped up deep discounts (apparel 24% off) and mobile shopping hit **53% of sales ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=school%20essentials%20and%20aggressive%20promotional,the%20growing%20prevalence%20of%20mobile))**, highlighting a continued shift to digital channels.  For advertisers, this implies strong ROI on e-commerce ad spend (especially mobile and apparel ads) in the back-to-school season.  Ad budgets should tilt toward digital, social and search ads during such events.",
+      "positivityScore": 9,
+      "importanceScore": 8
+    },
+    {
+      "timeGenerated": "2025-07-23T13:48:41.375Z",
+      "country": "US",
+      "newsTitle": "U.S. apparel imports from China fall to 22-year low amid steep tariffs",
+      "industry": "Clothing/Apparel",
+      "link": "https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/",
+      "effect": "Record trade barriers (tariffs up to 145%) led U.S. clothing imports from China to plunge **25% year-on-year** to just $556M in May 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/#:~:text=In%20May%202025%2C%20U,S)).  Retailers are aggressively shifting sourcing to Vietnam (+29%), India, Bangladesh and Mexico (+12%) ([www.reuters.com](https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/#:~:text=retailers%20to%20shift%20sourcing%20to,saw%20gains%2C%20with%20apparel%20imports)).  This supply-chain shift means many brands will relaunch “Made in Vietnam/Mexico” products.  Advertisers should pivot campaigns toward locally-made or new-source apparel lines.  The upheaval may hurt promotions of Chinese-made fast-fashion, but create new ad narratives (e.g. “made closer to home”).",
+      "positivityScore": 3,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T13:48:41.375Z",
+      "country": "France",
+      "newsTitle": "France moves to ban advertising of ‘ultra-fast fashion’ under new eco law",
+      "industry": "Clothing/Apparel (Fast Fashion)",
+      "link": "https://www.marieclaire.co.uk/fashion/france-fast-fashion-ban",
+      "effect": "France’s new sustainability bill would **criminalize promotions of ultra-fast fashion** brands (e.g. Shein, Temu) ([www.marieclaire.co.uk](https://www.marieclaire.co.uk/fashion/france-fast-fashion-ban#:~:text=France%20has%20taken%20a%20significant,Based)) ([www.marieclaire.co.uk](https://www.marieclaire.co.uk/fashion/france-fast-fashion-ban#:~:text=discards%2035%20clothing%20items%20every,While)).  It ties an “eco-score” to garments and aims to levy taxes up to €10 or 50% of price by 2030.  In practice, influencer and display ads for cheap throwaway fashion would be banned ([www.marieclaire.co.uk](https://www.marieclaire.co.uk/fashion/france-fast-fashion-ban#:~:text=discards%2035%20clothing%20items%20every,While)).  Advertisers in France must now pivot away from marketing ultra-fast fashion towards more ESG-friendly lines.  Budget should shift into promoting sustainable/slow-fashion brands, recycling/reuse campaigns, or local/responsible manufacturers, per the regulation’s intent.",
+      "positivityScore": 2,
+      "importanceScore": 8
+    },
+    {
+      "timeGenerated": "2025-07-23T13:48:41.375Z",
+      "country": "France",
+      "newsTitle": "Publicis organic revenue +5.9% in Q2; raises 2025 growth forecast",
+      "industry": "Advertising/Media (Agencies)",
+      "link": "https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/",
+      "effect": "France’s Publicis reported a **10% jump in Q2 revenue**, led by strong demand in all regions (notably the U.S.) ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Publicis%20completed%20a%20%2412%20billion,Nespresso%2C%20Lego%2C%20Paramount%2C%20and%20Spotify)).  It raised its full-year organic growth target to **~5%** ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Publicis%20completed%20a%20%2412%20billion,new%20business%20run%2C%20securing%20clients)).  CEO Arthur Sadoun noted that clients remain wary of “walled gardens” and favor **diversified, transparent media buying** ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=forecast%20for%202025%20following%20strong,their%20data%20confined%20to%20%E2%80%9Cwalled)).  This signals resilient advertiser spending on both digital and traditional channels, plus big tech news ties (Peacock streamers up 20% ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Publicis%20completed%20a%20%2412%20billion,new%20business%20run%2C%20securing%20clients))).  For marketers, it implies healthy agency demand and openness to multi-channel campaigns.",
+      "positivityScore": 8,
+      "importanceScore": 9
+    },
+    {
+      "timeGenerated": "2025-07-23T13:48:41.375Z",
+      "country": "United Kingdom",
+      "newsTitle": "London Fashion Week to waive fees, double international funding in major overhaul",
+      "industry": "Clothing/Apparel (Fashion Events)",
+      "link": "https://www.marieclaire.co.uk/fashion/london-fashion-week-changes",
+      "effect": "U.K. fashion leaders are boosting London Fashion Week (LFW) – removing designer participation fees, **doubling funding** for guest programmes, and extending support for NewGen designers ([www.marieclaire.co.uk](https://www.marieclaire.co.uk/fashion/london-fashion-week-changes#:~:text=include%20eliminating%20designer%20participation%20fees,catalyzing%20a%20nationwide%20fashion%20resurgence)).  These moves are meant to reclaim global influence and reverse talent loss to Paris/Milan.  For advertisers, this means LFW (and related arts/fashion events) will attract more international attention and media coverage.  Budgeting for UK fashion advertising – including runway sponsorships and digital campaigns around LFW – could yield higher audience reach.  Cultural events tied to British fashion may see increased marketing support.",
+      "positivityScore": 7,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T13:48:41.376Z",
+      "country": "Spain",
+      "newsTitle": "Spain’s tourism sector still growing, but summer sales slow to +2.7%",
+      "industry": "Ticketing/Events (Tourism)",
+      "link": "https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/",
+      "effect": "Despite record visitor totals, Spain’s tourism revenue growth is cooling.  Industry group Exceltur projects **+2.7% sales in Q3’25** (versus +6.3% in Q3’24) ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=Spain%27s%20tourism%20sector%20anticipates%20a,the%20same%20period%20in%202024%E2%80%94while)).  Still, roughly **100 million tourists** are expected in 2025, contributing ~13.2% of GDP ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=destinations%20other%20than%20the%20U,in%20the%20sector%20has%20diminished)).  Growth in spend from UK, U.S., Japan and China is slower but positive; EU/Eurozone visitors (Germany, France) are weak ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=numbers%20are%20still%20expected,the%20continent%20and%20Asians%20choosing)).  Advertisers should moderate expectations: allocate to tourism campaigns but focus on existing tourists and high-value segments (luxury travel, domestic holidays).  Emphasize experiences and promotions that capture the large visitor base, even as overall growth eases.",
+      "positivityScore": 6,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T14:50:51.956Z",
+      "country": "US",
+      "newsTitle": "US online spending surges $24.1 billion as steep discounts boost sales, Adobe says",
+      "industry": "Retail/E-Commerce",
+      "link": "https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/",
+      "effect": "This “Black Friday in Summer” event saw online sales jump 30.3% year-over-year to $24.1B ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=U,significant%20jump%20from%20the%20previous)).  Consumers are heavily responding to steep discounts, especially on clothing (apparel discounts reached 24% ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=Amazon%2C%20Walmart%2C%20Target%2C%20and%20Best,the%20growing%20prevalence%20of%20mobile))), indicating that digital ad campaigns around big sale events are highly effective.  Ad budgets should lean into summer discount promotions and mobile commerce channels to capture this demand surge.",
+      "positivityScore": 9,
+      "importanceScore": 10
+    },
+    {
+      "timeGenerated": "2025-07-23T14:50:51.956Z",
+      "country": "US",
+      "newsTitle": "Prime Day 2025 sales grow, despite nervous early reports",
+      "industry": "Retail/E-Commerce",
+      "link": "https://www.axios.com/2025/07/09/prime-day-2025-sales-growth-deals",
+      "effect": "Prime Day 2025 drove U.S. shoppers to spend $7.9B on the first day (up ~10% YoY) and is projected to reach $23.8B over four days, a 28.4% increase ([www.axios.com](https://www.axios.com/2025/07/09/prime-day-2025-sales-growth-deals#:~:text=Prime%20Day%202025%20experienced%20significant,year%20increase)).  This robust growth signals that promotional shopping holidays remain a major boon for retailers. Advertisers should capitalize by investing in major e-commerce and social media ads around such events. Even disputed early reports aside, the clear upward trend means increased ad spend on Amazon and its partners will likely yield high ROI.",
+      "positivityScore": 8,
+      "importanceScore": 9
+    },
+    {
+      "timeGenerated": "2025-07-23T14:50:51.956Z",
+      "country": "US",
+      "newsTitle": "US retail sales beat expectations in June",
+      "industry": "Retail/E-Commerce",
+      "link": "https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/",
+      "effect": "U.S. retail sales rebounded 0.6% in June (versus a 0.9% fall in May), exceeding forecasts ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/#:~:text=U,that%20the%20rise%20may%20be)).  This suggests a pickup in consumer spending, albeit partly due to price increases.  For advertisers, even modest consumption growth indicates stability: brands can moderately boost retail advertising, focusing on categories with price upticks (e.g. household goods).  However, caution is warranted since real volume growth may be soft.",
+      "positivityScore": 7,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T14:50:51.956Z",
+      "country": "Mexico",
+      "newsTitle": "Mexico retailers poised for Q2 bump despite inflation rebound",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/",
+      "effect": "Analysts expect Mexican retailers to report strong Q2 results driven by factors like Easter timing and bonus payouts.  Walmart de México (Walmex) is forecast to see ~9% revenue growth (and 5% profit growth) year-over-year ([www.reuters.com](https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/#:~:text=and%20Liverpool%20are%20expected%20to,persistent%20inflation%20by%20promoting%20private)).  Discretionary categories (clothing, electronics) are driving this bump.  This points to rising consumer spending power, so advertisers should increase marketing spend in Mexico on retail channels.  Investment in promotions, loyalty programs and targeted digital ads could capture the upswing in foot traffic and online buying.",
+      "positivityScore": 8,
+      "importanceScore": 8
+    },
+    {
+      "timeGenerated": "2025-07-23T14:50:51.956Z",
+      "country": "Mexico",
+      "newsTitle": "Walmart Mexico's profit dips 10% after tepid consumption growth",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/",
+      "effect": "Walmex reported an 8% sales increase in Q2 but net profit fell 10% to 11.23B pesos ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,598%20million%29%2C%20underperforming%20the)).  This suggests revenue is growing but margins are squeezed by stubborn inflation and cautious consumer spending.  For marketers, it signals mixed conditions: there is demand (sales up) but consumers are price-sensitive. Advertising should focus on value messaging (e.g. discounts, private labels) rather than broad spending increases.  Expansion (25 new stores) provides opportunities for local advertising, but overall budgets may be carefully targeted given the profit softness.",
+      "positivityScore": 5,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T14:50:51.956Z",
+      "country": "Spain",
+      "newsTitle": "Spain's tourism sector expects slowdown in summer sales",
+      "industry": "Tourism/Events",
+      "link": "https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/",
+      "effect": "Spain foresees record visitor numbers in 2025, but summer revenue growth is expected to slow to +2.7% year-on-year (versus +6.3% last year) ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=numbers%20are%20still%20expected,the%20same%20period%20in%202024%E2%80%94while)).  Inbound tourism is still rising (especially from U.S., Japan, China), but growth is moderating.  Advertisers should note that demand remains high overall, yet competitive intensity could increase. If planning ad spend, emphasize targeting the remaining growth markets (North America, Asia) and consider local promotions to offset any drop in European visitors.  The slowdown suggests a careful approach: mainstream campaigns may yield less incremental impact, but niche marketing (luxury, regional tourism) could still pay off.",
+      "positivityScore": 5,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T14:50:51.957Z",
+      "country": "India",
+      "newsTitle": "India's cooling inflation prompts rate cut calls, raises concerns over weakening domestic demand",
+      "industry": "Retail/Consumer",
+      "link": "https://www.reuters.com/world/india/indias-cooling-inflation-prompts-rate-cut-calls-raises-concerns-over-weakening-2025-07-15/",
+      "effect": "India’s retail inflation fell to a six-year low in June, largely because of weak domestic demand. Car sales hit an 18-month low and home sales plunged 20% ([www.reuters.com](https://www.reuters.com/world/india/indias-cooling-inflation-prompts-rate-cut-calls-raises-concerns-over-weakening-2025-07-15/#:~:text=disinflation%20is%20largely%20driven%20by,June%20quarter.%20Urban%20consumption)).  In other words, consumers are cutting back, and wage growth is stagnant.  This is negative for advertisers: brands may need to hold budgets steady or optimize spending rather than expand.  Campaigns should focus on value and essentials (not luxury).  Overall, advertising investment in India should be conservative until consumer sentiment improves.",
+      "positivityScore": 2,
+      "importanceScore": 8
+    },
+    {
+      "timeGenerated": "2025-07-23T14:50:51.957Z",
+      "country": "Brazil",
+      "newsTitle": "Brazil's monthly inflation forecast to have slowed further in June",
+      "industry": "Retail/Consumer",
+      "link": "https://www.reuters.com/world/americas/brazils-monthly-inflation-forecast-have-slowed-further-june-2025-07-09/",
+      "effect": "Brazil saw a further slowdown in monthly inflation to +0.20% in June (from 0.26% in May) ([www.reuters.com](https://www.reuters.com/world/americas/brazils-monthly-inflation-forecast-have-slowed-further-june-2025-07-09/#:~:text=Brazil%27s%20monthly%20inflation%20is%20expected,significantly%20above%20the)), thanks to cheaper fuel, though annual inflation remains high (~5.3%).  Slowing prices can support consumer spending, which is positive. However, persistent inflation (especially in essentials like electricity) means budgets are still tight. Advertisers should note moderate improvement in affordability, so campaigns that promote deals or financing (instalments) could resonate. Overall, expect cautious optimism: the environment is stabilizing, but not yet a boom.",
+      "positivityScore": 3,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T14:57:15.970Z",
+      "country": "US",
+      "newsTitle": "U.S. online spending surges $24.1 billion as steep discounts boost sales",
+      "industry": "Retail/E-commerce",
+      "link": "https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/",
+      "effect": "This report shows a massive 30.3% year-on-year jump in U.S. online sales (from $14.2B to $24.1B) during July’s large-scale discount event ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=U,to)).  The surge (nicknamed “Black Friday in Summer”) was driven especially by apparel, electronics and school products.  For advertisers, this means digital channels and e-commerce platforms will be prime battlegrounds: retailers will invest heavily in online ads to capture budget-conscious shoppers.  It signals that allocating more budget to performance and social media advertising now can boost conversions as consumers leverage deep discounts.",
+      "positivityScore": 9,
+      "importanceScore": 9
+    },
+    {
+      "timeGenerated": "2025-07-23T14:57:15.970Z",
+      "country": "US",
+      "newsTitle": "U.S. retail sales rebound 0.6% in June after spring decline",
+      "industry": "Retail",
+      "link": "https://www.axios.com/2025/07/17/retail-sales-june-economy-tariffs",
+      "effect": "Reuters/Census data show U.S. retail spending unexpectedly climbed 0.6% in June after a near 1% drop in May ([www.axios.com](https://www.axios.com/2025/07/17/retail-sales-june-economy-tariffs#:~:text=In%20June%202025%2C%20U,are%20maintaining%20spending%20levels%20despite)).  The gain was driven by a 2.9% jump in clothing sales, indicating consumer confidence in discretionary spending.  For advertisers, this rebound suggests consumers remain willing to spend on apparel and other goods.  Brands should see this as a cue to maintain or increase ad spend on retail and fashion campaigns, as demand is proving resilient despite earlier softness.",
+      "positivityScore": 8,
+      "importanceScore": 8
+    },
+    {
+      "timeGenerated": "2025-07-23T14:57:15.970Z",
+      "country": "US",
+      "newsTitle": "North Carolina secures 2026 MLS All-Star Game with $2M sports-betting fund support",
+      "industry": "Ticketing/Events (Sports)",
+      "link": "http://www.axios.com/local/charlotte/2025/07/16/sports-betting-2026-mls-all-star-game-bank-of-america-stadium-north-carolina",
+      "effect": "The U.S. state of North Carolina (Charlotte) won the bid for the 2026 MLS All-Star Game, backed by a $2 million grant from a new sports events fund ([www.axios.com](https://www.axios.com/local/charlotte/2025/07/16/sports-betting-2026-mls-all-star-game-bank-of-america-stadium-north-carolina#:~:text=North%20Carolina%20has%20secured%20the,Events%2C%20Games%2C%20and%20Attractions%20Fund)).  This is the third major event funded under a new sports-betting revenue stream, with many more on the horizon ([www.axios.com](https://www.axios.com/local/charlotte/2025/07/16/sports-betting-2026-mls-all-star-game-bank-of-america-stadium-north-carolina#:~:text=established%20in%202023%20under%20the,betting%20brings%20new%20revenue%20streams)).  The impact for advertising and tourism is significant: large events like an MLS All-Star Game drive hotel stays, restaurant visits and local spending (Axios reports a 3.5% uptick in hotel occupancy from recent events in Charlotte ([www.axios.com](https://www.axios.com/local/charlotte/2025/07/18/fifa-club-world-cup-charlotte-hotels#:~:text=The%20FIFA%20Club%20World%20Cup,County%2C%20according%20to%20the%20Charlotte))).  Marketers should target regional sports fans now, as event marketing spend and tourism ads around 2026 are likely to increase.",
+      "positivityScore": 7,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T14:57:15.971Z",
+      "country": "Mexico",
+      "newsTitle": "Walmart Mexico Q2 sales rise 8% despite profit falling; 25 new stores opened",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/",
+      "effect": "Walmart’s Mexico unit (Walmex) reported an 8% year-on-year sales increase in Q2 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,25)).  Growth was driven by promotions around the Hot Sale and Father’s Day; the company opened 25 new stores (mostly discount Bodega Aurrera and Sam’s Club locations) ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=profit,for%20enhanced%20price%20perception%20and)).  The profit dip (–10%) was blamed on slow consumer confidence, but higher sales and store expansion signal that retailers are still vying for market share.  For advertisers, this means Mexico’s retail market is expanding – brands should invest more in marketing to capture budget-conscious shoppers and to promote new store openings.",
+      "positivityScore": 6,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T14:57:15.971Z",
+      "country": "Spain",
+      "newsTitle": "Spain’s tourism revenue growth to slow to 2.7% in Q3, but record visitor numbers still expected",
+      "industry": "Ticketing/Events (Tourism)",
+      "link": "https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/",
+      "effect": "Spain’s tourism group forecasts Q3 2025 tourism revenue up 2.7% YoY (down from 6.3% a year earlier), even as tourist volumes hit new highs ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=Spain%27s%20tourism%20sector%20anticipates%20a,the%20same%20period%20in%202024%E2%80%94while)).  Spending growth will moderate due to global uncertainties, though visitors from the U.S., UK, Japan and China are still rising.  For marketers, this suggests the Spanish market remains large but competitive.  Advertisers should continue campaigns (targeting international travelers and high-value segments) but be prepared for diminishing returns; focusing ads on travel-spending incentives and local promotions could help capture the more cautious tourist.",
+      "positivityScore": 5,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T14:57:15.972Z",
+      "country": "Netherlands",
+      "newsTitle": "Dutch growth forecast cut to 1.7% in 2025, U.S. trade tariffs weighing",
+      "industry": "Retail/Economy",
+      "link": "https://www.reuters.com/markets/europe/dutch-economic-growth-set-slow-trade-tariffs-bite-2025-07-10/",
+      "effect": "Government advisers now expect the Netherlands to grow only ~1.7% in 2025 (down from 1.9%) due to U.S. tariffs impacting exports ([www.reuters.com](https://www.reuters.com/markets/europe/dutch-economic-growth-set-slow-trade-tariffs-bite-2025-07-10/#:~:text=According%20to%20a%20report%20by,previous%20estimates%2C%20which%20anticipated%20growth)).  Slower economic expansion suggests Dutch consumers may tighten spending ahead.  For advertisers, this is a warning sign: budgets might flatten or shrink, especially in export-oriented and industrial sectors.  Investment in performance marketing and targeted local campaigns could mitigate.  Still, any stabilization (e.g. sticking to Internet ads) is key, as basic 1–2% growth still means consumers spend, albeit more cautiously.",
+      "positivityScore": 3,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T14:57:15.972Z",
+      "country": "France",
+      "newsTitle": "Publicis reports 5.9% organic Q2 growth, raises full-year guidance",
+      "industry": "Advertising (Agency)",
+      "link": "https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/",
+      "effect": "Publicis Groupe (major French ad agency) said its Q2 net revenues grew 5.9% organically, beating expectations ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Publicis%2C%20the%20French%20advertising%20firm%2C,their%20data%20confined%20to%20%E2%80%9Cwalled)), and it raised its 2025 growth forecast. The CEO noted client demand remains strong beyond big tech platforms.  This indicates robust demand for diversified ad spending.  For media buyers and marketing strategists, such strong agency performance confirms healthy overall ad budgets in Europe.  It suggests we should be bullish on digital and diversified media buys rather than relying solely on big social/tech channels.",
+      "positivityScore": 8,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T15:30:23.223Z",
+      "country": "China",
+      "newsTitle": "Economists urge Chinese local govts to target consumption to drive growth",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/#:~:text=consumption%20over%20traditional%20growth%20strategies,the%20first%20half%20of%20the",
+      "effect": "This policy push signals a major boost in Chinese retail demand – annual retail sales are projected to exceed ¥50 trillion (~$6.97 trillion) in 2025 ([www.reuters.com](https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/#:~:text=Commerce%20Minister%20Wang%20Wentao%20acknowledged,are%20intensifying%20calls%20to%20make)).  More consumer spending means retailers and brand advertisers will likely increase marketing budgets to capture rising demand, especially in ecommerce and consumer goods.",
+      "positivityScore": 9,
+      "importanceScore": 8
+    },
+    {
+      "timeGenerated": "2025-07-23T15:30:23.223Z",
+      "country": "Mexico",
+      "newsTitle": "Walmart Mexico's profit dips 10% after tepid consumption growth",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,25",
+      "effect": "Mexican retail is expanding; Walmex saw sales +8% YoY in Q2 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,25)) and opened 25 new stores ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=profit,brand%20products)), indicating growth opportunities.  However, profit fell as consumer confidence remained mixed.  Retailers (Walmart, Bodega Aurrera, Sam’s Club) are using heavy promotions (e.g. branded campaigns like “Lilo & Stitch” ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=by%20Bodega%20Aurrera%20and%20Sam%E2%80%99s,challenges%2C%20Walmex%20maintained%20its%202025))) to drive traffic.  Advertisers should consider reallocating spend to support store launches and promotions in Mexico, while being cautious of the slower consumer spending recovery.",
+      "positivityScore": 6,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T15:30:23.223Z",
+      "country": "Spain",
+      "newsTitle": "Beauty firm Puig's quarterly sales rise a steady 8%",
+      "industry": "Beauty/Wellness",
+      "link": "https://www.reuters.com/markets/europe/puig-posts-8-rise-q2-sales-2025-07-16/#:~:text=Spanish%20beauty%20company%20Puig%2C%20known,Chairman%20and%20CEO%20Marc%20Puig",
+      "effect": "Strong performance by Puig (brands like Carolina Herrera) shows robust beauty demand.  Q2 sales hit €1.09 billion, up 8% YoY ([www.reuters.com](https://www.reuters.com/markets/europe/puig-posts-8-rise-q2-sales-2025-07-16/#:~:text=Spanish%20beauty%20company%20Puig%2C%20known,Despite)), with double-digit gains in Asia (+19.5% ([www.reuters.com](https://www.reuters.com/markets/europe/puig-posts-8-rise-q2-sales-2025-07-16/#:~:text=facing%20potential%20challenges%2C%20including%20increased,increase))) and Americas (+10%).  This indicates growth in beauty advertising opportunities in Spain and abroad as global demand for premium cosmetics rises.  Beauty marketers may increase spend especially in high-growth regions noted.",
+      "positivityScore": 8,
+      "importanceScore": 6
+    },
+    {
+      "timeGenerated": "2025-07-23T15:30:23.223Z",
+      "country": "Spain",
+      "newsTitle": "Spain's tourism sector expects slowdown in summer sales",
+      "industry": "Ticketing/Events (Tourism)",
+      "link": "https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=Spain%27s%20tourism%20sector%20anticipates%20a,Exceltur%20notes%20a%20decrease%20in",
+      "effect": "Tourism will grow more slowly this summer – up ~2.7% YoY in Q3 (vs 6.3% in Q3’24) ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=Spain%27s%20tourism%20sector%20anticipates%20a,the%20same%20period%20in%202024%E2%80%94while)).  Although record visitor numbers (~100 million) are still projected ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=destinations%20other%20than%20the%20U,to%20Spain%27s)), key markets (Germany, France) may send fewer tourists ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=numbers%20are%20still%20expected,Exceltur%20notes%20a%20decrease%20in)).  Advertisers in travel, hospitality, and cultural events should note that marketing spend may need to shift focus: target resilience markets (UK, US, Asia ([www.reuters.com](https://www.reuters.com/markets/europe/spains-tourism-sector-expects-slowdown-summer-sales-2025-07-10/#:~:text=increase%20in%20the%20third%20quarter%E2%80%94down,Exceltur%20notes%20a%20decrease%20in))) and emphasize value as consumer caution grows.  Overall, moderate tourism growth tempers big ad spend increases in Spain’s travel sector.",
+      "positivityScore": 5,
+      "importanceScore": 7
+    },
+    {
+      "timeGenerated": "2025-07-23T15:30:23.224Z",
+      "country": "France",
+      "newsTitle": "Publicis' CEO dismisses Meta threat, raises yearly growth guidance",
+      "industry": "Advertising (Agencies/Media)",
+      "link": "https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Publicis%2C%20the%20French%20advertising%20firm%2C,their%20data%20confined%20to%20%E2%80%9Cwalled",
+      "effect": "Paris-based Publicis reports strong global demand – Q2 net revenue organic growth was +5.9%, with 10% revenue jump ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Second,and%20Interpublic%2C%20per%20JPMorgan%20data)).  It has raised its 2025 growth forecast to ~5% (from 4–5%) ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Publicis%2C%20the%20French%20advertising%20firm%2C,their%20data%20confined%20to%20%E2%80%9Cwalled)).  This surge, along with $5.2 b of new business wins in H1 ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Second,and%20Interpublic%2C%20per%20JPMorgan%20data)), signals advertisers are expanding spend and seeking diversified channels beyond big tech platforms.  For marketers, it suggests investing more in data-driven, multi-platform campaigns via agencies like Publicis, rather than relying solely on “walled garden” networks.",
+      "positivityScore": 9,
+      "importanceScore": 9
+    }
+  ],
+  "success": true,
+  "data": {
+    "lastUpdated": "2025-07-23T13:05:08.089Z",
+    "countries": {
+      "US": {
+        "name": "US",
+        "lastUpdated": "2025-07-23T13:05:08.089Z",
+        "overallScore": 6.9,
+        "industryScores": {
+          "Beauty/wellness": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          },
+          "clothing/apparel": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          },
+          "retail": {
+            "positivityScore": 6.4,
+            "importanceScore": 7.4,
+            "averageScore": 6.9
+          },
+          "ticketing/events": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          }
+        },
+        "industries": {
+          "Beauty/wellness": [],
+          "clothing/apparel": [],
+          "retail": [
+            {
+              "title": "Fed's rate-cut delay intact as inflation fears override Trump pressure",
+              "link": "https://www.reuters.com/business/feds-rate-cut-delay-intact-inflation-fears-override-trump-pressure-2025-07-18/",
+              "positivityScore": 2,
+              "importanceScore": 9,
+              "effect": null
+            },
+            {
+              "title": "US retail sales beat expectations in June",
+              "link": "https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/",
+              "positivityScore": 7,
+              "importanceScore": 8,
+              "effect": null
+            },
+            {
+              "title": "US weekly jobless claims fall; job growth appears steady in July",
+              "link": "https://www.reuters.com/business/us-weekly-jobless-claims-fall-job-growth-appears-steady-july-2025-07-17/",
+              "positivityScore": 7,
+              "importanceScore": 7,
+              "effect": null
+            },
+            {
+              "title": "US consumer sentiment improves in July",
+              "link": "https://www.reuters.com/business/us-consumer-sentiment-improves-july-2025-07-18/",
+              "positivityScore": 8,
+              "importanceScore": 7,
+              "effect": null
+            },
+            {
+              "title": "Alphabet will seek to reassure investors as AI rivals step up competition",
+              "link": "https://www.reuters.com/business/alphabet-will-seek-reassure-investors-ai-rivals-step-up-competition-2025-07-22/",
+              "positivityScore": 8,
+              "importanceScore": 6,
+              "effect": null
+            }
+          ],
+          "ticketing/events": []
+        }
+      },
+      "Germany": {
+        "name": "Germany",
+        "lastUpdated": "2024-01-15T10:00:00.000Z",
+        "overallScore": 6.8,
+        "industryScores": {
+          "Beauty/wellness": {
+            "positivityScore": 7.5,
+            "importanceScore": 7,
+            "averageScore": 7.3
+          },
+          "clothing/apparel": {
+            "positivityScore": 6,
+            "importanceScore": 7.5,
+            "averageScore": 6.8
+          },
+          "retail": {
+            "positivityScore": 6.5,
+            "importanceScore": 8,
+            "averageScore": 7.3
+          },
+          "ticketing/events": {
+            "positivityScore": 6,
+            "importanceScore": 6,
+            "averageScore": 6
+          }
+        },
+        "industries": {
+          "Beauty/wellness": [
+            {
+              "title": "Beiersdorf Reports Strong Nivea Sales Growth in Europe",
+              "link": "https://www.reuters.com/business/retail-consumer/beiersdorf-nivea-growth-2024",
+              "positivityScore": 8,
+              "importanceScore": 7,
+              "effect": "Strong European beauty market performance increases advertising budgets for cosmetics and skincare brands."
+            }
+          ],
+          "clothing/apparel": [
+            {
+              "title": "Adidas Faces Continued Challenges Post-Yeezy Partnership End",
+              "link": "https://www.bloomberg.com/news/articles/2024-01-14/adidas-post-yeezy-challenges",
+              "positivityScore": 5,
+              "importanceScore": 8,
+              "effect": "Brand restructuring creates opportunities for repositioning campaigns but reduces overall advertising spend."
+            }
+          ],
+          "retail": [
+            {
+              "title": "German Retail Sales Show Modest Recovery in December",
+              "link": "https://www.ft.com/content/german-retail-recovery-december-2024",
+              "positivityScore": 7,
+              "importanceScore": 8,
+              "effect": "Retail recovery signals increased consumer confidence and potential growth in retail advertising investments."
+            }
+          ],
+          "ticketing/events": [
+            {
+              "title": "German Music Festival Industry Reports 12% Revenue Growth",
+              "link": "https://www.cnbc.com/2024/01-15/german-music-festival-growth.html",
+              "positivityScore": 7,
+              "importanceScore": 6,
+              "effect": "Growing events sector creates new opportunities for experiential marketing and festival sponsorships."
+            }
+          ]
+        }
+      },
+      "France": {
+        "name": "France",
+        "lastUpdated": "2025-07-23T13:05:08.089Z",
+        "overallScore": 5,
+        "industryScores": {
+          "Beauty/wellness": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          },
+          "clothing/apparel": {
+            "positivityScore": 2,
+            "importanceScore": 8,
+            "averageScore": 5
+          },
+          "retail": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          },
+          "ticketing/events": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          }
+        },
+        "industries": {
+          "Beauty/wellness": [],
+          "clothing/apparel": [
+            {
+              "title": "Luxury heavyweights struggle to shake off shopper fatigue",
+              "link": "https://www.reuters.com/world/china/luxury-heavyweights-struggle-shake-off-shopper-fatigue-2025-07-23/",
+              "positivityScore": 2,
+              "importanceScore": 8,
+              "effect": null
+            }
+          ],
+          "retail": [],
+          "ticketing/events": []
+        }
+      },
+      "United Kingdom": {
+        "name": "United Kingdom",
+        "lastUpdated": "2024-01-15T10:00:00.000Z",
+        "overallScore": 6.5,
+        "industryScores": {
+          "Beauty/wellness": {
+            "positivityScore": 7,
+            "importanceScore": 7.5,
+            "averageScore": 7.3
+          },
+          "clothing/apparel": {
+            "positivityScore": 6,
+            "importanceScore": 7,
+            "averageScore": 6.5
+          },
+          "retail": {
+            "positivityScore": 5.5,
+            "importanceScore": 8,
+            "averageScore": 6.8
+          },
+          "ticketing/events": {
+            "positivityScore": 6.5,
+            "importanceScore": 6,
+            "averageScore": 6.3
+          }
+        },
+        "industries": {
+          "Beauty/wellness": [
+            {
+              "title": "Unilever Beauty Brands Show Resilience Despite Economic Pressures",
+              "link": "https://www.ft.com/content/unilever-beauty-resilience-2024",
+              "positivityScore": 7,
+              "importanceScore": 7,
+              "effect": "Beauty market stability provides consistent advertising opportunities despite broader economic challenges."
+            }
+          ],
+          "clothing/apparel": [
+            {
+              "title": "ASOS Reports Challenging Q4 Amid Cost-of-Living Crisis",
+              "link": "https://www.bloomberg.com/news/articles/2024-01-15/asos-challenging-q4-results",
+              "positivityScore": 5,
+              "importanceScore": 7,
+              "effect": "Fashion retail challenges reduce advertising budgets but create opportunities for value-focused messaging."
+            }
+          ],
+          "retail": [
+            {
+              "title": "UK Retail Sales Drop 3.2% in December, Worst in Two Years",
+              "link": "https://www.reuters.com/world/uk/uk-retail-sales-december-drop-2024",
+              "positivityScore": 4,
+              "importanceScore": 8,
+              "effect": "Retail downturn forces brands to be more strategic with advertising spend and focus on ROI-driven campaigns."
+            }
+          ],
+          "ticketing/events": [
+            {
+              "title": "London Theatre District Reports Post-Pandemic Recovery",
+              "link": "https://www.cnbc.com/2024/01/14/london-theatre-recovery.html",
+              "positivityScore": 7,
+              "importanceScore": 6,
+              "effect": "Entertainment sector recovery creates opportunities for cultural and experiential marketing campaigns."
+            }
+          ]
+        }
+      },
+      "Italy": {
+        "name": "Italy",
+        "lastUpdated": "2025-07-23T13:05:08.089Z",
+        "overallScore": 5,
+        "industryScores": {
+          "Beauty/wellness": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          },
+          "clothing/apparel": {
+            "positivityScore": 3,
+            "importanceScore": 7,
+            "averageScore": 5
+          },
+          "retail": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          },
+          "ticketing/events": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          }
+        },
+        "industries": {
+          "Beauty/wellness": [],
+          "clothing/apparel": [
+            {
+              "title": "Luxury heavyweights struggle to shake off shopper fatigue",
+              "link": "https://www.reuters.com/world/china/luxury-heavyweights-struggle-shake-off-shopper-fatigue-2025-07-23/",
+              "positivityScore": 3,
+              "importanceScore": 7,
+              "effect": null
+            }
+          ],
+          "retail": [],
+          "ticketing/events": []
+        }
+      },
+      "Spain": {
+        "name": "Spain",
+        "lastUpdated": "2024-01-15T10:00:00.000Z",
+        "overallScore": 6.9,
+        "industryScores": {
+          "Beauty/wellness": {
+            "positivityScore": 7,
+            "importanceScore": 6.5,
+            "averageScore": 6.8
+          },
+          "clothing/apparel": {
+            "positivityScore": 8.5,
+            "importanceScore": 8,
+            "averageScore": 8.3
+          },
+          "retail": {
+            "positivityScore": 6.5,
+            "importanceScore": 7.5,
+            "averageScore": 7
+          },
+          "ticketing/events": {
+            "positivityScore": 6,
+            "importanceScore": 6,
+            "averageScore": 6
+          }
+        },
+        "industries": {
+          "Beauty/wellness": [
+            {
+              "title": "Spanish Beauty Market Shows Steady Growth Despite Economic Headwinds",
+              "link": "https://www.reuters.com/business/retail-consumer/spanish-beauty-market-growth-2024",
+              "positivityScore": 7,
+              "importanceScore": 6,
+              "effect": "Stable beauty market provides consistent advertising opportunities for cosmetics and wellness brands."
+            }
+          ],
+          "clothing/apparel": [
+            {
+              "title": "Inditex (Zara) Reports Record Annual Profits",
+              "link": "https://www.bloomberg.com/news/articles/2024-01-15/inditex-zara-record-profits",
+              "positivityScore": 9,
+              "importanceScore": 8,
+              "effect": "Fast fashion success drives increased advertising budgets and expansion of digital marketing campaigns globally."
+            }
+          ],
+          "retail": [
+            {
+              "title": "Spanish Retail Sales Recover to Pre-Pandemic Levels",
+              "link": "https://www.ft.com/content/spanish-retail-recovery-2024",
+              "positivityScore": 7,
+              "importanceScore": 7,
+              "effect": "Retail recovery signals improved consumer confidence and increased spending on brand advertising."
+            }
+          ],
+          "ticketing/events": [
+            {
+              "title": "Spanish Music Festivals Plan Major Expansion for Summer 2024",
+              "link": "https://www.cnbc.com/2024/01/14/spanish-music-festivals-expansion.html",
+              "positivityScore": 7,
+              "importanceScore": 6,
+              "effect": "Festival expansion creates new opportunities for youth-focused advertising and experiential marketing campaigns."
+            }
+          ]
+        }
+      },
+      "Australia": {
+        "name": "Australia",
+        "lastUpdated": "2025-07-23T13:05:08.089Z",
+        "overallScore": 6.5,
+        "industryScores": {
+          "Beauty/wellness": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          },
+          "clothing/apparel": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          },
+          "retail": {
+            "positivityScore": 6,
+            "importanceScore": 7,
+            "averageScore": 6.5
+          },
+          "ticketing/events": {
+            "positivityScore": 0,
+            "importanceScore": 0,
+            "averageScore": 0
+          }
+        },
+        "industries": {
+          "Beauty/wellness": [],
+          "clothing/apparel": [],
+          "retail": [
+            {
+              "title": "Australia central bank wary of cutting rates too quickly, prudent to await more data",
+              "link": "https://www.reuters.com/world/asia-pacific/australia-central-bank-wary-cutting-rates-too-quickly-prudent-await-more-data-2025-07-22/",
+              "positivityScore": 6,
+              "importanceScore": 7,
+              "effect": null
+            }
+          ],
+          "ticketing/events": []
+        }
+      },
+      "South Korea": {
+        "name": "South Korea",
+        "lastUpdated": "2024-01-15T10:00:00.000Z",
+        "overallScore": 7.5,
+        "industryScores": {
+          "Beauty/wellness": {
+            "positivityScore": 9,
+            "importanceScore": 8.5,
+            "averageScore": 8.8
+          },
+          "clothing/apparel": {
+            "positivityScore": 7.5,
+            "importanceScore": 7,
+            "averageScore": 7.3
+          },
+          "retail": {
+            "positivityScore": 7,
+            "importanceScore": 7.5,
+            "averageScore": 7.3
+          },
+          "ticketing/events": {
+            "positivityScore": 8,
+            "importanceScore": 7.5,
+            "averageScore": 7.8
+          }
+        },
+        "industries": {
+          "Beauty/wellness": [
+            {
+              "title": "K-Beauty Exports Reach Record $8.2 Billion in 2023",
+              "link": "https://www.bloomberg.com/news/articles/2024-01-15/k-beauty-exports-record",
+              "positivityScore": 9,
+              "importanceScore": 9,
+              "effect": "K-beauty boom creates massive opportunities for influencer marketing and global beauty advertising campaigns."
+            }
+          ],
+          "clothing/apparel": [
+            {
+              "title": "Korean Fashion Brands Gain Global Recognition Through K-Pop",
+              "link": "https://www.ft.com/content/korean-fashion-k-pop-global-2024",
+              "positivityScore": 8,
+              "importanceScore": 7,
+              "effect": "Cultural influence drives fashion advertising opportunities and celebrity endorsement campaigns globally."
+            }
+          ],
+          "retail": [
+            {
+              "title": "South Korean E-commerce Market Grows 12% Year-over-Year",
+              "link": "https://www.reuters.com/technology/south-korean-ecommerce-growth-2024",
+              "positivityScore": 8,
+              "importanceScore": 8,
+              "effect": "E-commerce growth increases demand for digital advertising and performance marketing solutions."
+            }
+          ],
+          "ticketing/events": [
+            {
+              "title": "K-Pop Concert Tours Generate $1.8B in Global Revenue",
+              "link": "https://www.cnbc.com/2024/01/14/k-pop-concerts-global-revenue.html",
+              "positivityScore": 9,
+              "importanceScore": 8,
+              "effect": "Massive concert industry success creates premium sponsorship opportunities and fan engagement campaigns."
+            }
+          ]
+        }
+      }
+    },
+    "newsHistory": [
+      {
+        "timeGenerated": "2025-07-23T13:05:08.089Z",
+        "country": "US",
+        "newsTitle": "Fed's rate-cut delay intact as inflation fears override Trump pressure",
+        "industry": "Retail",
+        "link": "https://www.reuters.com/business/feds-rate-cut-delay-intact-inflation-fears-override-trump-pressure-2025-07-18/",
+        "effect": null,
+        "positivityScore": 2,
+        "importanceScore": 9
+      },
+      {
+        "timeGenerated": "2025-07-23T13:05:08.089Z",
+        "country": "US",
+        "newsTitle": "US retail sales beat expectations in June",
+        "industry": "Retail",
+        "link": "https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/",
+        "effect": null,
+        "positivityScore": 7,
+        "importanceScore": 8
+      },
+      {
+        "timeGenerated": "2025-07-23T13:05:08.089Z",
+        "country": "US",
+        "newsTitle": "US weekly jobless claims fall; job growth appears steady in July",
+        "industry": "Retail",
+        "link": "https://www.reuters.com/business/us-weekly-jobless-claims-fall-job-growth-appears-steady-july-2025-07-17/",
+        "effect": null,
+        "positivityScore": 7,
+        "importanceScore": 7
+      },
+      {
+        "timeGenerated": "2025-07-23T13:05:08.089Z",
+        "country": "US",
+        "newsTitle": "US consumer sentiment improves in July",
+        "industry": "Retail",
+        "link": "https://www.reuters.com/business/us-consumer-sentiment-improves-july-2025-07-18/",
+        "effect": null,
+        "positivityScore": 8,
+        "importanceScore": 7
+      },
+      {
+        "timeGenerated": "2025-07-23T13:05:08.089Z",
+        "country": "US",
+        "newsTitle": "Alphabet will seek to reassure investors as AI rivals step up competition",
+        "industry": "Retail",
+        "link": "https://www.reuters.com/business/alphabet-will-seek-reassure-investors-ai-rivals-step-up-competition-2025-07-22/",
+        "effect": null,
+        "positivityScore": 8,
+        "importanceScore": 6
+      },
+      {
+        "timeGenerated": "2025-07-23T13:05:08.089Z",
+        "country": "France",
+        "newsTitle": "Luxury heavyweights struggle to shake off shopper fatigue",
+        "industry": "Clothing/apparel",
+        "link": "https://www.reuters.com/world/china/luxury-heavyweights-struggle-shake-off-shopper-fatigue-2025-07-23/",
+        "effect": null,
+        "positivityScore": 2,
+        "importanceScore": 8
+      },
+      {
+        "timeGenerated": "2025-07-23T13:05:08.089Z",
+        "country": "Italy",
+        "newsTitle": "Luxury heavyweights struggle to shake off shopper fatigue",
+        "industry": "Clothing/apparel",
+        "link": "https://www.reuters.com/world/china/luxury-heavyweights-struggle-shake-off-shopper-fatigue-2025-07-23/",
+        "effect": null,
+        "positivityScore": 3,
+        "importanceScore": 7
+      },
+      {
+        "timeGenerated": "2025-07-23T13:05:08.089Z",
+        "country": "Australia",
+        "newsTitle": "Australia central bank wary of cutting rates too quickly, prudent to await more data",
+        "industry": "Retail",
+        "link": "https://www.reuters.com/world/asia-pacific/australia-central-bank-wary-cutting-rates-too-quickly-prudent-await-more-data-2025-07-22/",
+        "effect": null,
+        "positivityScore": 6,
+        "importanceScore": 7
+      }
+    ]
+  },
+  "message": "News data retrieved successfully"
+}
