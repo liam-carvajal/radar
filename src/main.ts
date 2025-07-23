@@ -769,6 +769,19 @@ function initializeMap() {
   selectedFeatures.on(['add', 'remove'], async function () {
     const selectedCountries = selectedFeatures.getArray();
     
+    // Check if selected country has data - if not, deselect it
+    if (selectedCountries.length === 1) {
+      const selectedCountry = selectedCountries[0];
+      const countryName = getCountryName(selectedCountry);
+      const backendCountryName = mapMapToBackendCountry(countryName);
+      
+      if (!countriesWithData.includes(backendCountryName)) {
+        console.log(`${countryName} has no data available, deselecting...`);
+        selectedFeatures.clear();
+        return;
+      }
+    }
+    
     if (selectedCountries.length === 1) {
       // Store original view state only if this is the first selection
       if (!originalViewState) {
