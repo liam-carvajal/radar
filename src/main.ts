@@ -653,8 +653,8 @@ function initializeMap() {
       `;
     }).join('');
 
-      sidebarContent.innerHTML = `
-    <div style="border-bottom: 2px solid rgba(255, 255, 255, 0.2); padding-bottom: 20px; margin-bottom: 30px;">
+    sidebarContent.innerHTML = `
+      <div style="border-bottom: 2px solid rgba(255, 255, 255, 0.2); padding-bottom: 20px; margin-bottom: 30px;">
       <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
         <h2 id="country-name" style="margin: 0; font-size: 28px; color: white; font-weight: 600;">${countryName}</h2>
         <button id="close-country-sidebar" style="
@@ -673,8 +673,8 @@ function initializeMap() {
           transition: color 0.2s ease;
         " onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#999'">×</button>
       </div>
-      <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">Last updated: ${new Date(countryData.lastUpdated).toLocaleString()}</p>
-    </div>
+        <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">Last updated: ${new Date(countryData.lastUpdated).toLocaleString()}</p>
+      </div>
       
       <div style="margin-bottom: 25px; padding: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 8px;">
         <h3 style="margin: 0 0 12px 0; font-size: 16px; color: #ccc; font-weight: 500;">Overall Score</h3>

@@ -555,11 +555,11 @@ function parseAnalysisResponse(response) {
         });
         
         // Reset news fields but keep country
-        currentNews = null;
-        currentEffect = null;
-        currentPositivity = null;
-        currentImportance = null;
-        currentLink = null;
+      currentNews = null;
+      currentEffect = null;
+      currentPositivity = null;
+      currentImportance = null;
+      currentLink = null;
       }
       
       let industryName = trimmedLine;
@@ -935,14 +935,14 @@ cron.schedule('0 */12 * * *', async () => {
 // Initial data fetch on server start (now optional since we have pre-loaded data)
 if (Object.keys(newsData.countries).length === 0) {
   console.log('📡 No initial data found, fetching from OpenAI...');
-  fetchNewsAnalysis()
-    .then(() => {
-      console.log('Initial news data fetch completed successfully');
-    })
-    .catch((error) => {
-      console.error('Initial news data fetch failed:', error);
+fetchNewsAnalysis()
+  .then(() => {
+    console.log('Initial news data fetch completed successfully');
+  })
+  .catch((error) => {
+    console.error('Initial news data fetch failed:', error);
       console.log('Server will continue running with pre-loaded initial data');
-    });
+  });
 } else {
   console.log('📋 Using pre-loaded initial news data');
   console.log('🔄 OpenAI updates will still run on schedule every 12 hours');
