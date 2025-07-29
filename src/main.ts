@@ -107,25 +107,68 @@ function generatePastelColor(str: string): string {
   return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
-// Function to get a color based on the overall score (red to green gradient)
+// Function to interpolate between two colors
+function interpolateColor(color1: [number, number, number], color2: [number, number, number], factor: number): string {
+  const r = Math.round(color1[0] + (color2[0] - color1[0]) * factor);
+  const g = Math.round(color1[1] + (color2[1] - color1[1]) * factor);
+  const b = Math.round(color1[2] + (color2[2] - color1[2]) * factor);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+// Function to format article summary: remove visible URLs but keep hyperlinks, add date
+function formatArticleSummary(effect: string, date: string): string {
+  if (!effect) return '';
+  
+  // Remove visible URL text patterns but keep markdown links functional
+  let formatted = effect
+    // Remove ([www.site.com](https://...)) - keep the link but remove the visible URL
+    .replace(/\(\[([^\]]*(?:www\.|http)[^\]]*)\]\([^)]+\)\)/g, '')
+    // Remove (www.site.com) or (https://site.com) standalone URLs in parentheses
+    .replace(/\([^)]*(?:www\.|https?:\/\/)[^)]*\)/g, '')
+    // Remove trailing commas and spaces left by URL removal
+    .replace(/,\s*–/g, ' –')
+    .replace(/\s+/g, ' ');
+  
+  // Add date at the beginning if available
+  const datePrefix = date ? `📅 ${date} - ` : '';
+  
+  return datePrefix + formatted.trim();
+}
+
+// Function to get a gradually changing color based on the overall score
 function getScoreColor(score: number): string {
-  if (score <= 1) {
-    return '#FF0000'; // Pure red for score 1
-  } else if (score >= 10) {
-    return '#00FF00'; // Pure green for score 10
-  } else {
-    // Interpolate between red and green
-    const normalizedScore = (score - 1) / 9; // 0 to 1
-    
-    // Red component decreases from 255 to 0
-    const red = Math.round(255 * (1 - normalizedScore));
-    // Green component increases from 0 to 255
-    const green = Math.round(255 * normalizedScore);
-    // Blue component stays at 0 for pure red-green transition
-    const blue = 0;
-    
-    return `rgb(${red}, ${green}, ${blue})`;
+  // Handle no data case
+  if (score <= 0) {
+    return 'rgba(247, 247, 247, 0.9)'; // Google Maps style light gray for No Data countries
   }
+  
+  // Normalize score to 0-1 range (assuming scores are 1-10)
+  const normalizedScore = Math.max(0, Math.min(1, (score - 1) / 9));
+  
+  // Define color points for smooth gradient: Red -> Orange -> Yellow -> Light Green -> Dark Green
+  const colors: [number, number, number][] = [
+    [220, 53, 69],   // Red (score 1)
+    [255, 108, 47],  // Red-Orange (score 2.25)
+    [255, 165, 0],   // Orange (score 3.5)
+    [255, 193, 7],   // Yellow-Orange (score 4.75)
+    [255, 235, 59],  // Yellow (score 6)
+    [139, 195, 74],  // Light Green (score 7.25)
+    [76, 175, 80],   // Medium Green (score 8.5)
+    [46, 125, 50]    // Dark Green (score 10)
+  ];
+  
+  // Calculate which segment we're in
+  const segmentSize = 1 / (colors.length - 1);
+  const segmentIndex = Math.floor(normalizedScore / segmentSize);
+  const segmentProgress = (normalizedScore % segmentSize) / segmentSize;
+  
+  // Handle edge case for maximum score
+  if (segmentIndex >= colors.length - 1) {
+    return `rgb(${colors[colors.length - 1][0]}, ${colors[colors.length - 1][1]}, ${colors[colors.length - 1][2]})`;
+  }
+  
+  // Interpolate between the two nearest colors
+  return interpolateColor(colors[segmentIndex], colors[segmentIndex + 1], segmentProgress);
 }
 
 // Function to load all country data and update map
@@ -201,32 +244,32 @@ function initializeMap() {
     layers: [
       new VectorLayer({
         source: vectorSource,
-        background: '#87CEEB', // Light blue ocean color (Sky Blue)
+        background: '#e3f2fd', // Google Maps style light blue ocean
         style: function (feature) {
           const countryName = getCountryName(feature);
           const backendCountryName = mapMapToBackendCountry(countryName);
           
           // Check if this country has data available
           if (!countriesWithData.includes(backendCountryName)) {
-            // Country has no data - light gray, not clickable
+            // Country has no data - very subtle, not clickable
             const fill = style.getFill();
             const stroke = style.getStroke();
             if (fill) {
-              fill.setColor('rgba(200, 200, 200, 0.3)');
+              fill.setColor('rgba(247, 247, 247, 0.9)'); // Google Maps style light gray for no-data countries
             }
             if (stroke) {
-              stroke.setColor('rgba(255, 255, 255, 0.5)');
-              stroke.setWidth(1);
+              stroke.setColor('rgba(156, 156, 156, 0.6)'); // Google Maps style subtle gray borders
+              stroke.setWidth(0.4);
             }
             return style;
           }
           
           // Check if we have cached data for this country
           const countryData = countryDataCache[backendCountryName];
-          let color = 'rgba(100, 150, 200, 0.6)'; // Default blue for clickable countries
+          let color = getScoreColor(5); // Default neutral color for clickable countries without specific score
           
           if (countryData && countryData.overallScore) {
-            // Color based on overall score (red to green gradient)
+            // Color based on overall score
             const score = countryData.overallScore;
             color = getScoreColor(score);
           }
@@ -237,8 +280,8 @@ function initializeMap() {
             fill.setColor(color);
           }
           if (stroke) {
-            stroke.setColor('rgba(255, 255, 255, 0.8)');
-            stroke.setWidth(countryData ? 2 : 1.5);
+            stroke.setColor('rgba(156, 156, 156, 0.8)'); // Google Maps style subtle gray borders
+            stroke.setWidth(0.8);
           }
           return style;
         },
@@ -564,12 +607,14 @@ function initializeMap() {
                 <p style="margin: 0 0 8px 0; font-size: 13px; color: #e0e0e0; line-height: 1.4;">
                   <a href="#" onclick="window.open('${link}', '_blank'); return false;" style="color: #2196F3; text-decoration: none; cursor: pointer;">${news.title} ↗</a>
                 </p>
-                <div style="display: flex; justify-content: space-between; font-size: 11px; color: #999;">
-                  <span>Positivity: ${news.positivityScore}/10</span>
-                  <span>Importance: ${news.importanceScore}/10</span>
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #999; margin-bottom: 4px;">
+                  <div>
+                    <span>Positivity: ${news.positivityScore}/10</span>
+                    <span style="margin-left: 15px;">Importance: ${news.importanceScore}/10</span>
+                  </div>
                 </div>
                 <div style="margin-top: 8px; font-size: 11px; color: #ccc; line-height: 1.3;">
-                  ${news.effect || ''}
+                  ${formatArticleSummary(news.effect || '', news.date || '')}
                 </div>
               </div>
             `;
@@ -585,12 +630,14 @@ function initializeMap() {
                 <p style="margin: 0 0 8px 0; font-size: 13px; color: #e0e0e0; line-height: 1.4;">
                   <a href="#" onclick="window.open('${link}', '_blank'); return false;" style="color: #2196F3; text-decoration: none; cursor: pointer;">${news.title} ↗</a>
                 </p>
-                <div style="display: flex; justify-content: space-between; font-size: 11px; color: #999;">
-                  <span>Positivity: ${news.positivityScore}/10</span>
-                  <span>Importance: ${news.importanceScore}/10</span>
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #999; margin-bottom: 4px;">
+                  <div>
+                    <span>Positivity: ${news.positivityScore}/10</span>
+                    <span style="margin-left: 15px;">Importance: ${news.importanceScore}/10</span>
+                  </div>
                 </div>
                 <div style="margin-top: 8px; font-size: 11px; color: #ccc; line-height: 1.3;">
-                  ${news.effect || ''}
+                  ${formatArticleSummary(news.effect || '', news.date || '')}
                 </div>
               </div>
             `;
@@ -910,36 +957,94 @@ function createDashboardPanels() {
       " onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#999'">×</button>
     </div>
     
-    <div style="space-y: 15px;">
-      <div style="margin-bottom: 15px;">
-        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #ccc; font-weight: 500;">Key Updates</h4>
-        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #e0e0e0;">• Market analysis for Q4 expansion</p>
-        <p style="margin: 4px 0 0 0; font-size: 13px; line-height: 1.5; color: #e0e0e0;">• Regional performance review</p>
-        <p style="margin: 4px 0 0 0; font-size: 13px; line-height: 1.5; color: #e0e0e0;">• Customer feedback integration</p>
-      </div>
-      
-      <div style="margin-bottom: 15px;">
-        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #ccc; font-weight: 500;">Today's Focus</h4>
-        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #e0e0e0;">Review expansion opportunities in EMEA region and assess market readiness for new product launches.</p>
-      </div>
-      
-      <div style="margin-bottom: 15px;">
-        <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #ccc; font-weight: 500;">Metrics</h4>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-          <span style="font-size: 12px; color: #999;">Active Regions</span>
-          <span style="font-size: 12px; color: #4CAF50; font-weight: 500;">12</span>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-          <span style="font-size: 12px; color: #999;">Coverage</span>
-          <span style="font-size: 12px; color: #2196F3; font-weight: 500;">85%</span>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-          <span style="font-size: 12px; color: #999;">Growth Rate</span>
-          <span style="font-size: 12px; color: #FF9800; font-weight: 500;">+14%</span>
-        </div>
+    <div id="memo-content" style="space-y: 15px;">
+      <div style="text-align: center; padding: 20px 0; color: #999;">
+        <div style="font-size: 16px; margin-bottom: 8px;">🤖</div>
+        <div>Loading AI-generated memo...</div>
       </div>
     </div>
   `;
+  
+  // Load AI-generated memo content
+  async function loadDailyMemo() {
+    try {
+      console.log('Loading Daily Memo from API...');
+      const response = await fetch('http://localhost:3001/api/daily-memo');
+      console.log('Daily Memo response status:', response.status);
+      const data = await response.json();
+      console.log('Daily Memo data:', data);
+      
+      if (data.success && data.memo) {
+        const memo = data.memo;
+        const memoContentEl = document.getElementById('memo-content');
+        
+        if (memoContentEl) {
+          memoContentEl.innerHTML = `
+            <div style="margin-bottom: 15px;">
+              <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #ccc; font-weight: 500;">Key Updates</h4>
+              ${memo.keyUpdates.map((update: string) => `<p style="margin: 0 0 4px 0; font-size: 13px; line-height: 1.5; color: #e0e0e0;">• ${update}</p>`).join('')}
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #ccc; font-weight: 500;">Today's Focus</h4>
+              <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #e0e0e0;">${memo.todaysFocus}</p>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #ccc; font-weight: 500;">30-Day Forecasts</h4>
+              ${memo.forecasts.map((forecast: string) => `<p style="margin: 0 0 4px 0; font-size: 13px; line-height: 1.5; color: #e0e0e0;">• ${forecast}</p>`).join('')}
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #ccc; font-weight: 500;">Metrics</h4>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 12px; color: #999;">Total Articles</span>
+                <span style="font-size: 12px; color: #4CAF50; font-weight: 500;">${memo.metrics.totalArticles}</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 12px; color: #999;">Positive News</span>
+                <span style="font-size: 12px; color: #4CAF50; font-weight: 500;">${memo.metrics.positiveNews}</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 12px; color: #999;">Negative News</span>
+                <span style="font-size: 12px; color: #e74c3c; font-weight: 500;">${memo.metrics.negativeNews}</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="font-size: 12px; color: #999;">Avg Importance</span>
+                <span style="font-size: 12px; color: #2196F3; font-weight: 500;">${memo.metrics.averageImportance}/10</span>
+              </div>
+            </div>
+            
+            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+              <p style="margin: 0; font-size: 10px; color: #666; text-align: center;">
+                ✨ AI-Generated • Updated ${new Date().toLocaleTimeString()}
+              </p>
+            </div>
+          `;
+        }
+      } else {
+        throw new Error('Failed to load memo');
+      }
+    } catch (error) {
+      console.error('Error loading daily memo:', error);
+      const memoContentEl = document.getElementById('memo-content');
+      if (memoContentEl) {
+        memoContentEl.innerHTML = `
+          <div style="text-align: center; padding: 20px 0; color: #e74c3c;">
+            <div style="font-size: 16px; margin-bottom: 8px;">⚠️</div>
+            <div>Failed to load AI memo</div>
+            <button onclick="loadDailyMemo()" style="margin-top: 10px; padding: 8px 16px; background: #333; border: none; color: white; border-radius: 4px; cursor: pointer;">Retry</button>
+          </div>
+        `;
+      }
+    }
+  }
+  
+  // Make loadDailyMemo globally accessible for retry button
+  (window as any).loadDailyMemo = loadDailyMemo;
+  
+  // Load memo content initially
+  setTimeout(loadDailyMemo, 1000);
 
   dailyMemoPanel.appendChild(dailyMemoContent);
   document.body.appendChild(dailyMemoPanel);
@@ -1833,7 +1938,7 @@ function createRadarFooter() {
 
   // Create text label
   const label = document.createElement('span');
-  label.textContent = 'RADAR by Sydnee, Andy, Max, and Liam';
+  label.textContent = 'RADAR by Sydney, Andy, Max, and Liam';
   label.style.cssText = `
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 14px;
@@ -1851,3 +1956,5 @@ function createRadarFooter() {
   // Start animation
   animate();
 }
+
+

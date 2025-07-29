@@ -343,7 +343,8 @@ function updateCountryData(country, newNews) {
       link: news.link || '',
       effect: news.effect,
       positivityScore: parseFloat(news.positivityScore) || 5,
-      importanceScore: parseFloat(news.importanceScore) || 5
+      importanceScore: parseFloat(news.importanceScore) || 5,
+      date: news.date || null
     });
   });
   
@@ -403,7 +404,8 @@ function updateCountryData(country, newNews) {
           link: news.link,
           positivityScore: news.positivityScore,
           importanceScore: news.importanceScore,
-          effect: news.effect
+          effect: news.effect,
+          date: news.date || null
         });
       }
     }
@@ -481,6 +483,7 @@ function parseAnalysisResponse(response) {
   let currentPositivity = null;
   let currentImportance = null;
   let currentLink = null;
+  let currentDate = null;
 
   console.log('Parsing OpenAI response...');
   console.log('Response preview:', response.substring(0, 500));
@@ -551,7 +554,8 @@ function parseAnalysisResponse(response) {
           effect: currentEffect,
           positivityScore: currentPositivity,
           importanceScore: currentImportance,
-          link: currentLink
+          link: currentLink,
+          date: currentDate || null
         });
         
         // Reset news fields but keep country
@@ -560,6 +564,7 @@ function parseAnalysisResponse(response) {
       currentPositivity = null;
       currentImportance = null;
       currentLink = null;
+      currentDate = null;
       }
       
       let industryName = trimmedLine;
@@ -577,6 +582,13 @@ function parseAnalysisResponse(response) {
         newsText = trimmedLine.replace('**News headline (with links and date):**', '').replace('**News headline:**', '').trim();
       } else {
         newsText = trimmedLine.replace('News headline (with links and date):', '').trim();
+      }
+      
+      // Extract date from (Source, Date) format
+      const sourceMatch = newsText.match(/\(([^,)]+),\s*([^)]+)\)/);
+      if (sourceMatch) {
+        currentDate = sourceMatch[2].trim(); // Extract the date part
+        console.log(`Found date: ${currentDate}`);
       }
       
       // Extract link if present in markdown format [text](url)
@@ -637,7 +649,8 @@ function parseAnalysisResponse(response) {
       effect: currentEffect,
       positivityScore: currentPositivity,
       importanceScore: currentImportance,
-      link: currentLink
+      link: currentLink,
+      date: currentDate || null
     });
   }
 
@@ -769,6 +782,135 @@ app.get('/api/countries-with-data', (req, res) => {
     data: countriesWithData,
     message: 'Countries with data retrieved successfully'
   });
+});
+
+// Generate AI-powered Daily Memo
+app.get('/api/daily-memo', async (req, res) => {
+  try {
+    console.log('Generating Daily Memo with GPT-4...');
+    
+    // Collect all current news articles
+    const allArticles = [];
+    Object.entries(newsData.countries).forEach(([country, data]) => {
+      if (data.industries) {
+        Object.entries(data.industries).forEach(([industry, newsItems]) => {
+          if (Array.isArray(newsItems)) {
+            newsItems.forEach(news => {
+              allArticles.push({
+                country,
+                industry,
+                title: news.title,
+                effect: news.effect,
+                positivityScore: news.positivityScore,
+                importanceScore: news.importanceScore,
+                date: news.date,
+                link: news.link
+              });
+            });
+          }
+        });
+      }
+    });
+    
+    if (allArticles.length === 0) {
+      return res.json({
+        success: true,
+        memo: {
+          keyUpdates: ['No recent news data available'],
+          todaysFocus: 'Monitor news sources for updates',
+          forecasts: ['Check back later for analysis'],
+          metrics: {
+            totalArticles: 0,
+            positiveNews: 0,
+            negativeNews: 0,
+            averageImportance: 0
+          }
+        }
+      });
+    }
+    
+    // Create concise summary of articles for GPT-4 (limit to most important articles to stay within token limit)
+    const sortedArticles = allArticles
+      .sort((a, b) => b.importanceScore - a.importanceScore)
+      .slice(0, 15); // Limit to top 15 most important articles
+    
+    const articlesSummary = sortedArticles.map(article => 
+      `${article.country}-${article.industry}: "${article.title}" (${article.positivityScore}/${article.importanceScore}) - ${article.effect.substring(0, 100)}...`
+    ).join('\n');
+    
+    const prompt = `Analyze these news articles and create a concise investment memo in JSON format:
+
+${articlesSummary}
+
+Return JSON with:
+{
+  "keyUpdates": ["3 bullet points (max 50 chars each)"],
+  "todaysFocus": "Single focus area for today (max 80 chars)",
+  "forecasts": ["3 predictions for next 30 days (max 50 chars each)"],
+  "metrics": {
+    "totalArticles": ${allArticles.length},
+    "positiveNews": ${allArticles.filter(a => a.positivityScore >= 6).length},
+    "negativeNews": ${allArticles.filter(a => a.positivityScore <= 4).length}, 
+    "averageImportance": ${Math.round(allArticles.reduce((sum, a) => sum + a.importanceScore, 0) / allArticles.length * 10) / 10}
+  }
+}
+
+Focus on investment/advertising opportunities, market trends, growth regions.`;
+
+    const response = await client.chat.completions.create({
+      model: "gpt-4",
+      messages: [{
+        role: "user",
+        content: prompt
+      }],
+      temperature: 0.3,
+      max_tokens: 800
+    });
+
+    const memoText = response.choices[0].message.content;
+    console.log('GPT-4 Daily Memo response:', memoText);
+
+    // Parse the JSON response
+    let memo;
+    try {
+      memo = JSON.parse(memoText);
+    } catch (parseError) {
+      console.error('Failed to parse GPT-4 response:', parseError);
+      // Fallback memo if parsing fails
+      memo = {
+        keyUpdates: [
+          `Analyzed ${allArticles.length} articles across ${Object.keys(newsData.countries).length} countries`,
+          'Investment sentiment varies by region',
+          'Multiple industries showing activity'
+        ],
+        todaysFocus: 'Review top-performing markets for expansion opportunities',
+        forecasts: [
+          'Continued regional market volatility expected',
+          'Digital advertising channels remain strong',
+          'Consumer behavior shifts influencing retail'
+        ],
+        metrics: {
+          totalArticles: allArticles.length,
+          positiveNews: allArticles.filter(a => a.positivityScore >= 6).length,
+          negativeNews: allArticles.filter(a => a.positivityScore <= 4).length,
+          averageImportance: Math.round(allArticles.reduce((sum, a) => sum + a.importanceScore, 0) / allArticles.length * 10) / 10
+        }
+      };
+    }
+
+    res.json({
+      success: true,
+      memo,
+      lastUpdated: new Date().toISOString()
+    });
+
+  } catch (error) {
+    console.error('Error generating daily memo:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
 });
 
 // Get available industries

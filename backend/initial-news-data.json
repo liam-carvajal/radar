@@ -1,15 +1,15 @@
 {
-  "lastUpdated": "2025-07-23T15:30:23.224Z",
+  "lastUpdated": "2025-07-28T20:45:11.746Z",
   "countries": {
     "US": {
       "name": "US",
-      "lastUpdated": "2025-07-23T15:50:17.056Z",
-      "overallScore": 7.4,
+      "lastUpdated": "2025-07-28T20:45:11.744Z",
+      "overallScore": 6.2,
       "industryScores": {
         "Beauty/wellness": {
-          "positivityScore": 0,
-          "importanceScore": 0,
-          "averageScore": 0
+          "positivityScore": 4,
+          "importanceScore": 6,
+          "averageScore": 4.7
         },
         "clothing/apparel": {
           "positivityScore": 3,
@@ -17,8 +17,8 @@
           "averageScore": 4.8
         },
         "retail": {
-          "positivityScore": 8,
-          "importanceScore": 8.1,
+          "positivityScore": 7.9,
+          "importanceScore": 8.2,
           "averageScore": 8.4
         },
         "ticketing/events": {
@@ -28,14 +28,24 @@
         }
       },
       "industries": {
-        "Beauty/wellness": [],
+        "Beauty/wellness": [
+          {
+            "title": "U.S. employers cut health benefits as weight-loss drug costs surge",
+            "link": "https://www.reuters.com/legal/litigation/many-us-employers-plan-pare-health-benefits-weight-loss-spending-soars-2025-07-16/",
+            "positivityScore": 4,
+            "importanceScore": 6,
+            "effect": "Employers report sharply rising costs for GLP-1 weight-loss drugs (e.g. Wegovy) – 77% cite them as a top concern ([www.reuters.com](https://www.reuters.com/legal/litigation/many-us-employers-plan-pare-health-benefits-weight-loss-spending-soars-2025-07-16/#:~:text=A%20recent%20Mercer%20survey%20found,them%20as%20a%20top%20concern)). Over 50% of large firms will cut health benefits, indicating tighter budgets for employer-sponsored wellness programs. For consumer health advertisers, this may shift marketing from employer plans to direct-to-consumer campaigns. Overall, the trend tightens pharma/wellness budgets.",
+            "date": null
+          }
+        ],
         "clothing/apparel": [
           {
             "title": "U.S. apparel imports from China fall to 22-year low amid steep tariffs",
             "link": "https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/",
             "positivityScore": 3,
             "importanceScore": 7,
-            "effect": "Record trade barriers (tariffs up to 145%) led U.S. clothing imports from China to plunge **25% year-on-year** to just $556M in May 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/#:~:text=In%20May%202025%2C%20U,S)).  Retailers are aggressively shifting sourcing to Vietnam (+29%), India, Bangladesh and Mexico (+12%) ([www.reuters.com](https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/#:~:text=retailers%20to%20shift%20sourcing%20to,saw%20gains%2C%20with%20apparel%20imports)).  This supply-chain shift means many brands will relaunch “Made in Vietnam/Mexico” products.  Advertisers should pivot campaigns toward locally-made or new-source apparel lines.  The upheaval may hurt promotions of Chinese-made fast-fashion, but create new ad narratives (e.g. “made closer to home”)."
+            "effect": "Record trade barriers (tariffs up to 145%) led U.S. clothing imports from China to plunge **25% year-on-year** to just $556M in May 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/#:~:text=In%20May%202025%2C%20U,S)).  Retailers are aggressively shifting sourcing to Vietnam (+29%), India, Bangladesh and Mexico (+12%) ([www.reuters.com](https://www.reuters.com/business/retail-consumer/tariffs-drive-us-clothing-imports-china-22-year-low-may-2025-07-09/#:~:text=retailers%20to%20shift%20sourcing%20to,saw%20gains%2C%20with%20apparel%20imports)).  This supply-chain shift means many brands will relaunch “Made in Vietnam/Mexico” products.  Advertisers should pivot campaigns toward locally-made or new-source apparel lines.  The upheaval may hurt promotions of Chinese-made fast-fashion, but create new ad narratives (e.g. “made closer to home”).",
+            "date": null
           }
         ],
         "retail": [
@@ -44,45 +54,108 @@
             "link": "https://www.reuters.com/business/us-economic-activity-up-outlook-pessimistic-fed-says-2025-07-16/",
             "positivityScore": 10,
             "importanceScore": 10,
-            "effect": "The Fed’s latest Beige Book notes rising costs from tariffs and slowing growth ([www.reuters.com](https://www.reuters.com/business/us-economic-activity-up-outlook-pessimistic-fed-says-2025-07-16/#:~:text=The%20Federal%20Reserve%27s%20Beige%20Book,consumer%20prices%20by%20late%20summer)).  Businesses are raising prices and delaying spending amid uncertainty, which likely curbs consumer demand and forces retailers to trim marketing budgets.  In short, tougher conditions and higher costs tend to dampen ad spending (especially in retail media)."
+            "effect": "The Fed’s latest Beige Book notes rising costs from tariffs and slowing growth ([www.reuters.com](https://www.reuters.com/business/us-economic-activity-up-outlook-pessimistic-fed-says-2025-07-16/#:~:text=The%20Federal%20Reserve%27s%20Beige%20Book,consumer%20prices%20by%20late%20summer)).  Businesses are raising prices and delaying spending amid uncertainty, which likely curbs consumer demand and forces retailers to trim marketing budgets.  In short, tougher conditions and higher costs tend to dampen ad spending (especially in retail media).",
+            "date": null
           },
           {
             "title": "Fed’s Waller again makes case for July interest rate cut",
             "link": "https://www.reuters.com/business/feds-waller-again-makes-case-july-interest-rate-cut-2025-07-17/",
             "positivityScore": 6,
             "importanceScore": 7,
-            "effect": "Fed Governor Waller signaled that economic growth is slowing and supported a rate cut ([www.reuters.com](https://www.reuters.com/business/feds-waller-again-makes-case-july-interest-rate-cut-2025-07-17/#:~:text=Federal%20Reserve%20Governor%20Christopher%20Waller,He%20argued%20that%20the%20current)).  If interest rates are indeed cut soon, consumer spending could get a modest boost – which would help retailers and advertisers.  However, Waller’s comments underscore lingering weakness (job risks, tariff pressures), suggesting firms may remain cautious with ad budgets.  Overall, the move toward easier policy is mildly positive for ad spending."
+            "effect": "Fed Governor Waller signaled that economic growth is slowing and supported a rate cut ([www.reuters.com](https://www.reuters.com/business/feds-waller-again-makes-case-july-interest-rate-cut-2025-07-17/#:~:text=Federal%20Reserve%20Governor%20Christopher%20Waller,He%20argued%20that%20the%20current)).  If interest rates are indeed cut soon, consumer spending could get a modest boost – which would help retailers and advertisers.  However, Waller’s comments underscore lingering weakness (job risks, tariff pressures), suggesting firms may remain cautious with ad budgets.  Overall, the move toward easier policy is mildly positive for ad spending.",
+            "date": null
           },
           {
             "title": "Fed's rate-cut delay intact as inflation fears override Trump pressure",
             "link": "https://www.reuters.com/business/feds-rate-cut-delay-intact-inflation-fears-override-trump-pressure-2025-07-18/",
             "positivityScore": 10,
             "importanceScore": 10,
-            "effect": "The Fed’s decision to hold rates high amid rising inflation pressures suggests tighter monetary conditions ahead. Higher borrowing costs and slower growth can dampen consumer spending, causing companies to tighten marketing budgets. Advertisers may face cutbacks in planned campaigns as businesses prioritize cost control under the Fed’s steady-rate policy."
+            "effect": "The Fed’s decision to hold rates high amid rising inflation pressures suggests tighter monetary conditions ahead. Higher borrowing costs and slower growth can dampen consumer spending, causing companies to tighten marketing budgets. Advertisers may face cutbacks in planned campaigns as businesses prioritize cost control under the Fed’s steady-rate policy.",
+            "date": null
           },
           {
             "title": "US retail sales beat expectations in June",
             "link": "https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/",
             "positivityScore": 7,
             "importanceScore": 7,
-            "effect": "Strong retail sales signal robust consumer demand, encouraging retailers and consumer brands to invest more in promotions and marketing. This positive consumer spending trend is likely to boost advertising budgets, as companies ramp up campaigns to capture the increased retail momentum."
+            "effect": "Strong retail sales signal robust consumer demand, encouraging retailers and consumer brands to invest more in promotions and marketing. This positive consumer spending trend is likely to boost advertising budgets, as companies ramp up campaigns to capture the increased retail momentum.",
+            "date": null
           },
           {
             "title": "Wall St edges up as strong retail sales data, earnings lift sentiment",
             "link": "https://www.reuters.com/business/wall-st-edges-up-strong-retail-sales-data-earnings-lift-sentiment-2025-07-17/",
             "positivityScore": 6,
             "importanceScore": 6,
-            "effect": "U.S. stocks rising on good retail results and earnings suggests some consumer and business confidence. Advertisers see this as a moderately positive signal that demand is holding up. However, mixed signals on tariffs and inflation mean companies may remain cautious, so any boost to ad spending is likely modest rather than dramatic."
+            "effect": "U.S. stocks rising on good retail results and earnings suggests some consumer and business confidence. Advertisers see this as a moderately positive signal that demand is holding up. However, mixed signals on tariffs and inflation mean companies may remain cautious, so any boost to ad spending is likely modest rather than dramatic.",
+            "date": null
           },
           {
             "title": "US weekly jobless claims fall; job growth appears steady in July",
             "link": "https://www.reuters.com/business/us-weekly-jobless-claims-fall-job-growth-appears-steady-july-2025-07-17/",
             "positivityScore": 7,
             "importanceScore": 6,
-            "effect": "A steady or improving job market supports consumer spending power, which is generally good for retailers and brands. When employment is strong, consumers may spend more freely, giving advertisers confidence. This stability is a positive for ad revenues, as marketing budgets are less likely to be cut when the economic outlook is solid."
+            "effect": "A steady or improving job market supports consumer spending power, which is generally good for retailers and brands. When employment is strong, consumers may spend more freely, giving advertisers confidence. This stability is a positive for ad revenues, as marketing budgets are less likely to be cut when the economic outlook is solid.",
+            "date": null
+          },
+          {
+            "title": "U.S. online spending surges 30% to $24.1B during mid-year sale",
+            "link": "https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/",
+            "positivityScore": 9,
+            "importanceScore": 8,
+            "effect": "Major online retailers (Amazon, Walmart, Target, etc.) drove a **30.3% year-on-year jump** in U.S. web sales to $24.1B over July 8–11, 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=U,to)).  This shows consumers snapped up deep discounts (apparel 24% off) and mobile shopping hit **53% of sales ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=school%20essentials%20and%20aggressive%20promotional,the%20growing%20prevalence%20of%20mobile))**, highlighting a continued shift to digital channels.  For advertisers, this implies strong ROI on e-commerce ad spend (especially mobile and apparel ads) in the back-to-school season.  Ad budgets should tilt toward digital, social and search ads during such events.",
+            "date": null
+          },
+          {
+            "title": "US online spending surges $24.1 billion as steep discounts boost sales, Adobe says",
+            "link": "https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/",
+            "positivityScore": 9,
+            "importanceScore": 10,
+            "effect": "This “Black Friday in Summer” event saw online sales jump 30.3% year-over-year to $24.1B ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=U,significant%20jump%20from%20the%20previous)).  Consumers are heavily responding to steep discounts, especially on clothing (apparel discounts reached 24% ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=Amazon%2C%20Walmart%2C%20Target%2C%20and%20Best,the%20growing%20prevalence%20of%20mobile))), indicating that digital ad campaigns around big sale events are highly effective.  Ad budgets should lean into summer discount promotions and mobile commerce channels to capture this demand surge.",
+            "date": null
+          },
+          {
+            "title": "Prime Day 2025 sales grow, despite nervous early reports",
+            "link": "https://www.axios.com/2025/07/09/prime-day-2025-sales-growth-deals",
+            "positivityScore": 8,
+            "importanceScore": 9,
+            "effect": "Prime Day 2025 drove U.S. shoppers to spend $7.9B on the first day (up ~10% YoY) and is projected to reach $23.8B over four days, a 28.4% increase ([www.axios.com](https://www.axios.com/2025/07/09/prime-day-2025-sales-growth-deals#:~:text=Prime%20Day%202025%20experienced%20significant,year%20increase)).  This robust growth signals that promotional shopping holidays remain a major boon for retailers. Advertisers should capitalize by investing in major e-commerce and social media ads around such events. Even disputed early reports aside, the clear upward trend means increased ad spend on Amazon and its partners will likely yield high ROI.",
+            "date": null
+          },
+          {
+            "title": "U.S. online spending surges $24.1 billion as steep discounts boost sales",
+            "link": "https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/",
+            "positivityScore": 9,
+            "importanceScore": 9,
+            "effect": "This report shows a massive 30.3% year-on-year jump in U.S. online sales (from $14.2B to $24.1B) during July’s large-scale discount event ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-online-spending-surges-241-billion-steep-discounts-boost-sales-adobe-says-2025-07-12/#:~:text=U,to)).  The surge (nicknamed “Black Friday in Summer”) was driven especially by apparel, electronics and school products.  For advertisers, this means digital channels and e-commerce platforms will be prime battlegrounds: retailers will invest heavily in online ads to capture budget-conscious shoppers.  It signals that allocating more budget to performance and social media advertising now can boost conversions as consumers leverage deep discounts.",
+            "date": null
+          },
+          {
+            "title": "U.S. retail sales rebound 0.6% in June after spring decline",
+            "link": "https://www.axios.com/2025/07/17/retail-sales-june-economy-tariffs",
+            "positivityScore": 8,
+            "importanceScore": 8,
+            "effect": "Reuters/Census data show U.S. retail spending unexpectedly climbed 0.6% in June after a near 1% drop in May ([www.axios.com](https://www.axios.com/2025/07/17/retail-sales-june-economy-tariffs#:~:text=In%20June%202025%2C%20U,are%20maintaining%20spending%20levels%20despite)).  The gain was driven by a 2.9% jump in clothing sales, indicating consumer confidence in discretionary spending.  For advertisers, this rebound suggests consumers remain willing to spend on apparel and other goods.  Brands should see this as a cue to maintain or increase ad spend on retail and fashion campaigns, as demand is proving resilient despite earlier softness.",
+            "date": null
+          },
+          {
+            "title": "U.S. retail sales rebound in June with 0.6% gain, beating forecasts",
+            "link": "https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/",
+            "positivityScore": 6,
+            "importanceScore": 8,
+            "effect": "Stronger-than-expected retail sales (up 0.6% in June) signal resilient consumer spending ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/#:~:text=U,Specific%20categories%20like)). Although bolstered partly by price hikes, this rebound suggests retailers will continue promoting products, benefiting marketing efforts. Stable US retail growth (especially in staples) supports continued ad spending.",
+            "date": null
           }
         ],
-        "ticketing/events": []
+        "ticketing/events": [
+          {
+            "title": "North Carolina secures 2026 MLS All-Star Game with $2M sports-betting fund support",
+            "link": "http://www.axios.com/local/charlotte/2025/07/16/sports-betting-2026-mls-all-star-game-bank-of-america-stadium-north-carolina",
+            "positivityScore": 7,
+            "importanceScore": 6,
+            "effect": "The U.S. state of North Carolina (Charlotte) won the bid for the 2026 MLS All-Star Game, backed by a $2 million grant from a new sports events fund ([www.axios.com](https://www.axios.com/local/charlotte/2025/07/16/sports-betting-2026-mls-all-star-game-bank-of-america-stadium-north-carolina#:~:text=North%20Carolina%20has%20secured%20the,Events%2C%20Games%2C%20and%20Attractions%20Fund)).  This is the third major event funded under a new sports-betting revenue stream, with many more on the horizon ([www.axios.com](https://www.axios.com/local/charlotte/2025/07/16/sports-betting-2026-mls-all-star-game-bank-of-america-stadium-north-carolina#:~:text=established%20in%202023%20under%20the,betting%20brings%20new%20revenue%20streams)).  The impact for advertising and tourism is significant: large events like an MLS All-Star Game drive hotel stays, restaurant visits and local spending (Axios reports a 3.5% uptick in hotel occupancy from recent events in Charlotte ([www.axios.com](https://www.axios.com/local/charlotte/2025/07/18/fifa-club-world-cup-charlotte-hotels#:~:text=The%20FIFA%20Club%20World%20Cup,County%2C%20according%20to%20the%20Charlotte))).  Marketers should target regional sports fans now, as event marketing spend and tourism ads around 2026 are likely to increase.",
+            "date": null
+          }
+        ]
       }
     },
     "United Kingdom": {
@@ -342,8 +415,8 @@
     },
     "Mexico": {
       "name": "Mexico",
-      "lastUpdated": "2025-07-23T15:30:23.223Z",
-      "overallScore": 7.9,
+      "lastUpdated": "2025-07-28T20:45:11.745Z",
+      "overallScore": 9.1,
       "industryScores": {
         "Beauty/wellness": {
           "positivityScore": 0,
@@ -356,9 +429,9 @@
           "averageScore": 0
         },
         "retail": {
-          "positivityScore": 6.3,
-          "importanceScore": 7,
-          "averageScore": 6.8
+          "positivityScore": 6.6,
+          "importanceScore": 7.4,
+          "averageScore": 7.2
         },
         "ticketing/events": {
           "positivityScore": 0,
@@ -375,21 +448,40 @@
             "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/",
             "positivityScore": 8,
             "importanceScore": 8,
-            "effect": "Analysts expect Mexican retailers to report strong Q2 results driven by factors like Easter timing and bonus payouts.  Walmart de México (Walmex) is forecast to see ~9% revenue growth (and 5% profit growth) year-over-year ([www.reuters.com](https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/#:~:text=and%20Liverpool%20are%20expected%20to,persistent%20inflation%20by%20promoting%20private)).  Discretionary categories (clothing, electronics) are driving this bump.  This points to rising consumer spending power, so advertisers should increase marketing spend in Mexico on retail channels.  Investment in promotions, loyalty programs and targeted digital ads could capture the upswing in foot traffic and online buying."
+            "effect": "Analysts expect Mexican retailers to report strong Q2 results driven by factors like Easter timing and bonus payouts.  Walmart de México (Walmex) is forecast to see ~9% revenue growth (and 5% profit growth) year-over-year ([www.reuters.com](https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/#:~:text=and%20Liverpool%20are%20expected%20to,persistent%20inflation%20by%20promoting%20private)).  Discretionary categories (clothing, electronics) are driving this bump.  This points to rising consumer spending power, so advertisers should increase marketing spend in Mexico on retail channels.  Investment in promotions, loyalty programs and targeted digital ads could capture the upswing in foot traffic and online buying.",
+            "date": null
           },
           {
             "title": "Walmart Mexico's profit dips 10% after tepid consumption growth",
             "link": "https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/",
             "positivityScore": 5,
             "importanceScore": 6,
-            "effect": "Walmex reported an 8% sales increase in Q2 but net profit fell 10% to 11.23B pesos ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,598%20million%29%2C%20underperforming%20the)).  This suggests revenue is growing but margins are squeezed by stubborn inflation and cautious consumer spending.  For marketers, it signals mixed conditions: there is demand (sales up) but consumers are price-sensitive. Advertising should focus on value messaging (e.g. discounts, private labels) rather than broad spending increases.  Expansion (25 new stores) provides opportunities for local advertising, but overall budgets may be carefully targeted given the profit softness."
+            "effect": "Walmex reported an 8% sales increase in Q2 but net profit fell 10% to 11.23B pesos ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,598%20million%29%2C%20underperforming%20the)).  This suggests revenue is growing but margins are squeezed by stubborn inflation and cautious consumer spending.  For marketers, it signals mixed conditions: there is demand (sales up) but consumers are price-sensitive. Advertising should focus on value messaging (e.g. discounts, private labels) rather than broad spending increases.  Expansion (25 new stores) provides opportunities for local advertising, but overall budgets may be carefully targeted given the profit softness.",
+            "date": null
           },
           {
             "title": "Walmart Mexico Q2 sales rise 8% despite profit falling; 25 new stores opened",
             "link": "https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/",
             "positivityScore": 6,
             "importanceScore": 7,
-            "effect": "Walmart’s Mexico unit (Walmex) reported an 8% year-on-year sales increase in Q2 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,25)).  Growth was driven by promotions around the Hot Sale and Father’s Day; the company opened 25 new stores (mostly discount Bodega Aurrera and Sam’s Club locations) ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=profit,for%20enhanced%20price%20perception%20and)).  The profit dip (–10%) was blamed on slow consumer confidence, but higher sales and store expansion signal that retailers are still vying for market share.  For advertisers, this means Mexico’s retail market is expanding – brands should invest more in marketing to capture budget-conscious shoppers and to promote new store openings."
+            "effect": "Walmart’s Mexico unit (Walmex) reported an 8% year-on-year sales increase in Q2 2025 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=Walmart%20Mexico%20and%20Central%20America,25)).  Growth was driven by promotions around the Hot Sale and Father’s Day; the company opened 25 new stores (mostly discount Bodega Aurrera and Sam’s Club locations) ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=profit,for%20enhanced%20price%20perception%20and)).  The profit dip (–10%) was blamed on slow consumer confidence, but higher sales and store expansion signal that retailers are still vying for market share.  For advertisers, this means Mexico’s retail market is expanding – brands should invest more in marketing to capture budget-conscious shoppers and to promote new store openings.",
+            "date": null
+          },
+          {
+            "title": "Walmart Mexico Q2 profit down 10% even as sales rise 8%",
+            "link": "https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/",
+            "positivityScore": 7,
+            "importanceScore": 8,
+            "effect": "Walmart de México saw sales grow ~8% YoY in Q2 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=quarter%20net%20profit%2C%20falling%20short,598%20million%29%2C%20underperforming%20the)), despite net profit falling 10%. The retailer opened 25 new stores in Q2. Robust sales and expansion imply strong consumer demand and more retail space, offering new advertising inventory (in-store and digital). However, cautious consumer confidence tempers pricing. Overall, expanding retail footprint and double-digit sales growth signal more ad opportunities.",
+            "date": null
+          },
+          {
+            "title": "Mexican retailers forecast 9% revenue growth in Q2 on Hot Sale promotions",
+            "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/",
+            "positivityScore": 7,
+            "importanceScore": 8,
+            "effect": "Industry analysts expect retailers like Walmex to post ~9% revenue growth (and 5% profit growth) in Q2 ([www.reuters.com](https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/#:~:text=profit,year.%20Analysts%20highlight%20that)), aided by the Hot Sale event and profit-sharing bonuses. Retailers are leaning on promotions, private labels, and loyalty programs to sustain demand. For advertisers, this implies high promotional ad spend around these sales events. Brands should allocate more budget to digital and loyalty marketing to capitalize on the spike in discretionary spending.",
+            "date": null
           }
         ],
         "ticketing/events": []
@@ -397,8 +489,8 @@
     },
     "India": {
       "name": "India",
-      "lastUpdated": "2025-07-23T14:50:51.957Z",
-      "overallScore": 5,
+      "lastUpdated": "2025-07-28T20:45:11.746Z",
+      "overallScore": 9.4,
       "industryScores": {
         "Beauty/wellness": {
           "positivityScore": 0,
@@ -411,9 +503,9 @@
           "averageScore": 0
         },
         "retail": {
-          "positivityScore": 2,
-          "importanceScore": 8,
-          "averageScore": 5
+          "positivityScore": 5.5,
+          "importanceScore": 8.5,
+          "averageScore": 7.3
         },
         "ticketing/events": {
           "positivityScore": 0,
@@ -430,7 +522,16 @@
             "link": "https://www.reuters.com/world/india/indias-cooling-inflation-prompts-rate-cut-calls-raises-concerns-over-weakening-2025-07-15/",
             "positivityScore": 2,
             "importanceScore": 8,
-            "effect": "India’s retail inflation fell to a six-year low in June, largely because of weak domestic demand. Car sales hit an 18-month low and home sales plunged 20% ([www.reuters.com](https://www.reuters.com/world/india/indias-cooling-inflation-prompts-rate-cut-calls-raises-concerns-over-weakening-2025-07-15/#:~:text=disinflation%20is%20largely%20driven%20by,June%20quarter.%20Urban%20consumption)).  In other words, consumers are cutting back, and wage growth is stagnant.  This is negative for advertisers: brands may need to hold budgets steady or optimize spending rather than expand.  Campaigns should focus on value and essentials (not luxury).  Overall, advertising investment in India should be conservative until consumer sentiment improves."
+            "effect": "India’s retail inflation fell to a six-year low in June, largely because of weak domestic demand. Car sales hit an 18-month low and home sales plunged 20% ([www.reuters.com](https://www.reuters.com/world/india/indias-cooling-inflation-prompts-rate-cut-calls-raises-concerns-over-weakening-2025-07-15/#:~:text=disinflation%20is%20largely%20driven%20by,June%20quarter.%20Urban%20consumption)).  In other words, consumers are cutting back, and wage growth is stagnant.  This is negative for advertisers: brands may need to hold budgets steady or optimize spending rather than expand.  Campaigns should focus on value and essentials (not luxury).  Overall, advertising investment in India should be conservative until consumer sentiment improves.",
+            "date": null
+          },
+          {
+            "title": "Meesho e-commerce sales jump 33% in FY2024; IPO filing planned",
+            "link": "https://www.reuters.com/world/india/indian-e-commerce-platform-meesho-files-confidentially-ipo-2025-07-03/",
+            "positivityScore": 9,
+            "importanceScore": 9,
+            "effect": "Meesho, a homegrown online retailer, saw revenue +33% YoY in FY24 (to ₹76.2 billion) and will soon IPO ([www.reuters.com](https://www.reuters.com/world/india/indian-e-commerce-platform-meesho-files-confidentially-ipo-2025-07-03/#:~:text=which%20competes%20with%20Amazon%20and,year%20to%2076.15%20billion)). This underscores India’s fast-growing e-commerce sector. For advertisers, it signals continued investment in digital marketing and affiliate programs. More Indian shoppers are buying online, so ad budgets should shift to mobile and social commerce channels. Rising e-commerce sales also benefit logistics and digital media partners in India.",
+            "date": null
           }
         ],
         "ticketing/events": []
@@ -438,8 +539,8 @@
     },
     "Brazil": {
       "name": "Brazil",
-      "lastUpdated": "2025-07-23T14:50:51.957Z",
-      "overallScore": 5,
+      "lastUpdated": "2025-07-28T20:45:11.746Z",
+      "overallScore": 3.8,
       "industryScores": {
         "Beauty/wellness": {
           "positivityScore": 0,
@@ -452,9 +553,9 @@
           "averageScore": 0
         },
         "retail": {
-          "positivityScore": 3,
-          "importanceScore": 7,
-          "averageScore": 5
+          "positivityScore": 2.5,
+          "importanceScore": 7.5,
+          "averageScore": 4.8
         },
         "ticketing/events": {
           "positivityScore": 0,
@@ -471,7 +572,16 @@
             "link": "https://www.reuters.com/world/americas/brazils-monthly-inflation-forecast-have-slowed-further-june-2025-07-09/",
             "positivityScore": 3,
             "importanceScore": 7,
-            "effect": "Brazil saw a further slowdown in monthly inflation to +0.20% in June (from 0.26% in May) ([www.reuters.com](https://www.reuters.com/world/americas/brazils-monthly-inflation-forecast-have-slowed-further-june-2025-07-09/#:~:text=Brazil%27s%20monthly%20inflation%20is%20expected,significantly%20above%20the)), thanks to cheaper fuel, though annual inflation remains high (~5.3%).  Slowing prices can support consumer spending, which is positive. However, persistent inflation (especially in essentials like electricity) means budgets are still tight. Advertisers should note moderate improvement in affordability, so campaigns that promote deals or financing (instalments) could resonate. Overall, expect cautious optimism: the environment is stabilizing, but not yet a boom."
+            "effect": "Brazil saw a further slowdown in monthly inflation to +0.20% in June (from 0.26% in May) ([www.reuters.com](https://www.reuters.com/world/americas/brazils-monthly-inflation-forecast-have-slowed-further-june-2025-07-09/#:~:text=Brazil%27s%20monthly%20inflation%20is%20expected,significantly%20above%20the)), thanks to cheaper fuel, though annual inflation remains high (~5.3%).  Slowing prices can support consumer spending, which is positive. However, persistent inflation (especially in essentials like electricity) means budgets are still tight. Advertisers should note moderate improvement in affordability, so campaigns that promote deals or financing (instalments) could resonate. Overall, expect cautious optimism: the environment is stabilizing, but not yet a boom.",
+            "date": null
+          },
+          {
+            "title": "Brazil retail sales fall 0.2% in May as tightening bites",
+            "link": "https://www.reuters.com/world/americas/brazils-retail-sales-miss-forecasts-fall-second-straight-month-2025-07-08/",
+            "positivityScore": 2,
+            "importanceScore": 8,
+            "effect": "Brazilian retail sales unexpectedly dropped 0.2% in May (second consecutive monthly fall) ([www.reuters.com](https://www.reuters.com/world/americas/brazils-retail-sales-miss-forecasts-fall-second-straight-month-2025-07-08/#:~:text=In%20May%202025%2C%20Brazil%27s%20retail,Day%2C%20retail%20performance%20continued%20to)), despite warm holiday effects. Rising interest rates (15% policy rate) are cooling consumer demand. For advertisers, this suggests tightening budgets for retail campaigns in Brazil. Focus may shift to staple goods and discount chains where sales remain stable. Overall, expect a cautious approach: prioritize advertising that drives immediate conversions and appeal to value-conscious shoppers.",
+            "date": "July 8, 2025"
           }
         ],
         "ticketing/events": []
@@ -520,7 +630,7 @@
     },
     "China": {
       "name": "China",
-      "lastUpdated": "2025-07-23T15:30:23.223Z",
+      "lastUpdated": "2025-07-28T20:45:11.746Z",
       "overallScore": 10,
       "industryScores": {
         "Beauty/wellness": {
@@ -535,8 +645,8 @@
         },
         "retail": {
           "positivityScore": 9,
-          "importanceScore": 8,
-          "averageScore": 8.7
+          "importanceScore": 8.5,
+          "averageScore": 9
         },
         "ticketing/events": {
           "positivityScore": 0,
@@ -553,7 +663,109 @@
             "link": "https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/#:~:text=consumption%20over%20traditional%20growth%20strategies,the%20first%20half%20of%20the",
             "positivityScore": 9,
             "importanceScore": 8,
-            "effect": "This policy push signals a major boost in Chinese retail demand – annual retail sales are projected to exceed ¥50 trillion (~$6.97 trillion) in 2025 ([www.reuters.com](https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/#:~:text=Commerce%20Minister%20Wang%20Wentao%20acknowledged,are%20intensifying%20calls%20to%20make)).  More consumer spending means retailers and brand advertisers will likely increase marketing budgets to capture rising demand, especially in ecommerce and consumer goods."
+            "effect": "This policy push signals a major boost in Chinese retail demand – annual retail sales are projected to exceed ¥50 trillion (~$6.97 trillion) in 2025 ([www.reuters.com](https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/#:~:text=Commerce%20Minister%20Wang%20Wentao%20acknowledged,are%20intensifying%20calls%20to%20make)).  More consumer spending means retailers and brand advertisers will likely increase marketing budgets to capture rising demand, especially in ecommerce and consumer goods.",
+            "date": null
+          },
+          {
+            "title": "China urges local govts to spur consumption; retail sales set to top ¥50 trillion",
+            "link": "https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/",
+            "positivityScore": 9,
+            "importanceScore": 9,
+            "effect": "Chinese economists call for boosting consumer spending to offset slower growth. Commerce Minister projects annual retail sales to exceed ¥50 trillion ($7 trillion) by end-2025 ([www.reuters.com](https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/#:~:text=Commerce%20Minister%20Wang%20Wentao%20acknowledged,are%20intensifying%20calls%20to%20make)). The focus on consumption means large-scale campaigns (e.g. subsidies, festivals) are likely. Advertisers should expect increased funding for consumer-oriented promotions and enter China’s huge market aggressively. Positive growth forecasts for retail indicate more ad inventory across TV, online, and in-store media.",
+            "date": null
+          }
+        ],
+        "ticketing/events": []
+      }
+    },
+    "Canada": {
+      "name": "Canada",
+      "lastUpdated": "2025-07-28T20:45:11.745Z",
+      "overallScore": 10,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 8,
+          "importanceScore": 9,
+          "averageScore": 8.8
+        },
+        "ticketing/events": {
+          "positivityScore": 9,
+          "importanceScore": 8,
+          "averageScore": 8.7
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "Loblaw Q2 sales rise on grocery demand; shoppers favor local, budget brands",
+            "link": "https://www.reuters.com/business/retail-consumer/loblaw-beats-quarterly-estimates-canadian-shoppers-turn-local-discount-brands-2025-07-24/",
+            "positivityScore": 8,
+            "importanceScore": 9,
+            "effect": "Loblaw reported +5.2% revenue (C$14.67 B) in Q2, driven by grocery and essentials ([www.reuters.com](https://www.reuters.com/business/retail-consumer/loblaw-beats-quarterly-estimates-canadian-shoppers-turn-local-discount-brands-2025-07-24/#:~:text=supported%20by%20increased%20demand%20for,commerce%20sales)). Canadian consumers are increasingly buying domestic (“Buy Canadian”) and lower-cost brands ([www.reuters.com](https://www.reuters.com/business/retail-consumer/loblaw-beats-quarterly-estimates-canadian-shoppers-turn-local-discount-brands-2025-07-24/#:~:text=medications%20at%20its%20discount%20stores,commerce%20sales)). Notably, e-commerce sales jumped +17.5% and same-store sales rose ~3–4%. For advertisers, this suggests shifting focus to digital channels and emphasizing local or value propositions. Grocery and drugstore ad buys will pay off, while premium brands may need to adjust messaging or promotions.",
+            "date": null
+          }
+        ],
+        "ticketing/events": [
+          {
+            "title": "Patriotic Canadians boost domestic travel; local tour sales surge 75%",
+            "link": "https://www.reuters.com/world/americas/montreal-over-miami-patriotic-canadians-change-summer-vacation-plans-2025-07-25/",
+            "positivityScore": 9,
+            "importanceScore": 8,
+            "effect": "According to Reuters, Canadian leisure travel shifted homeward amid U.S. tensions. A “Buy Canadian” sentiment drove a 75% spike in local travel package sales ([www.reuters.com](https://www.reuters.com/world/americas/montreal-over-miami-patriotic-canadians-change-summer-vacation-plans-2025-07-25/#:~:text=threats%20to%20annex%20Canada%20and,are%20exploring%20destinations%20like%20Ottawa)), plus 4% growth in domestic tourism spending. Destinations (e.g. Banff, Ottawa) saw record demand. For marketers, this is a big opportunity to reallocate travel and hospitality ad spend to domestic tourism campaigns. Airlines, hotels, and tourist boards should ramp up ads locally. Event and festival promotions in Canada will also enjoy higher engagement.",
+            "date": null
+          }
+        ]
+      }
+    },
+    "Germany": {
+      "name": "Germany",
+      "lastUpdated": "2025-07-28T20:45:11.746Z",
+      "overallScore": 3.8,
+      "industryScores": {
+        "Beauty/wellness": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "clothing/apparel": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        },
+        "retail": {
+          "positivityScore": 3,
+          "importanceScore": 7,
+          "averageScore": 4.8
+        },
+        "ticketing/events": {
+          "positivityScore": 0,
+          "importanceScore": 0,
+          "averageScore": 0
+        }
+      },
+      "industries": {
+        "Beauty/wellness": [],
+        "clothing/apparel": [],
+        "retail": [
+          {
+            "title": "German consumer sentiment hits 18-month low on saving binge",
+            "link": "https://www.reuters.com/markets/europe/german-consumer-sentiment-falls-august-households-opt-save-finds-gfk-2025-07-24/",
+            "positivityScore": 3,
+            "importanceScore": 7,
+            "effect": "German consumer confidence fell again in August (index –21.5) as households become more cautious ([www.reuters.com](https://www.reuters.com/markets/europe/german-consumer-sentiment-falls-august-households-opt-save-finds-gfk-2025-07-24/#:~:text=German%20consumer%20sentiment%20is%20set,consumer%20caution%20and%20a%20heightened)). Germans are saving more amid uncertainty. This signals weaker retail spending ahead. Advertisers in Germany should anticipate reduced budgets from cautious consumers. Ad campaigns may need to emphasize value or essentials to maintain impact. Overall, this is a warning to focus on low-cost or high-ROI ads, as discretionary spending wanes.",
+            "date": null
           }
         ],
         "ticketing/events": []
@@ -950,6 +1162,116 @@
       "effect": "Paris-based Publicis reports strong global demand – Q2 net revenue organic growth was +5.9%, with 10% revenue jump ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Second,and%20Interpublic%2C%20per%20JPMorgan%20data)).  It has raised its 2025 growth forecast to ~5% (from 4–5%) ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Publicis%2C%20the%20French%20advertising%20firm%2C,their%20data%20confined%20to%20%E2%80%9Cwalled)).  This surge, along with $5.2 b of new business wins in H1 ([www.reuters.com](https://www.reuters.com/business/media-telecom/publicis-ceo-dismisses-meta-threat-raises-yearly-growth-guidance-2025-07-17/#:~:text=Second,and%20Interpublic%2C%20per%20JPMorgan%20data)), signals advertisers are expanding spend and seeking diversified channels beyond big tech platforms.  For marketers, it suggests investing more in data-driven, multi-platform campaigns via agencies like Publicis, rather than relying solely on “walled garden” networks.",
       "positivityScore": 9,
       "importanceScore": 9
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.744Z",
+      "country": "US",
+      "newsTitle": "U.S. retail sales rebound in June with 0.6% gain, beating forecasts",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/",
+      "effect": "Stronger-than-expected retail sales (up 0.6% in June) signal resilient consumer spending ([www.reuters.com](https://www.reuters.com/business/retail-consumer/us-retail-sales-beat-expectations-june-2025-07-17/#:~:text=U,Specific%20categories%20like)). Although bolstered partly by price hikes, this rebound suggests retailers will continue promoting products, benefiting marketing efforts. Stable US retail growth (especially in staples) supports continued ad spending.",
+      "positivityScore": 6,
+      "importanceScore": 8,
+      "date": null
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.744Z",
+      "country": "US",
+      "newsTitle": "U.S. employers cut health benefits as weight-loss drug costs surge",
+      "industry": "Beauty/Wellness",
+      "link": "https://www.reuters.com/legal/litigation/many-us-employers-plan-pare-health-benefits-weight-loss-spending-soars-2025-07-16/",
+      "effect": "Employers report sharply rising costs for GLP-1 weight-loss drugs (e.g. Wegovy) – 77% cite them as a top concern ([www.reuters.com](https://www.reuters.com/legal/litigation/many-us-employers-plan-pare-health-benefits-weight-loss-spending-soars-2025-07-16/#:~:text=A%20recent%20Mercer%20survey%20found,them%20as%20a%20top%20concern)). Over 50% of large firms will cut health benefits, indicating tighter budgets for employer-sponsored wellness programs. For consumer health advertisers, this may shift marketing from employer plans to direct-to-consumer campaigns. Overall, the trend tightens pharma/wellness budgets.",
+      "positivityScore": 4,
+      "importanceScore": 6,
+      "date": null
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.745Z",
+      "country": "Mexico",
+      "newsTitle": "Walmart Mexico Q2 profit down 10% even as sales rise 8%",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/",
+      "effect": "Walmart de México saw sales grow ~8% YoY in Q2 ([www.reuters.com](https://www.reuters.com/business/retail-consumer/walmarts-mexico-unit-posts-10-dip-q2-profit-even-sales-rise-2025-07-16/#:~:text=quarter%20net%20profit%2C%20falling%20short,598%20million%29%2C%20underperforming%20the)), despite net profit falling 10%. The retailer opened 25 new stores in Q2. Robust sales and expansion imply strong consumer demand and more retail space, offering new advertising inventory (in-store and digital). However, cautious consumer confidence tempers pricing. Overall, expanding retail footprint and double-digit sales growth signal more ad opportunities.",
+      "positivityScore": 7,
+      "importanceScore": 8,
+      "date": null
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.745Z",
+      "country": "Mexico",
+      "newsTitle": "Mexican retailers forecast 9% revenue growth in Q2 on Hot Sale promotions",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/",
+      "effect": "Industry analysts expect retailers like Walmex to post ~9% revenue growth (and 5% profit growth) in Q2 ([www.reuters.com](https://www.reuters.com/sustainability/sustainable-finance-reporting/mexico-retailers-poised-q2-bump-despite-inflation-rebound-2025-07-14/#:~:text=profit,year.%20Analysts%20highlight%20that)), aided by the Hot Sale event and profit-sharing bonuses. Retailers are leaning on promotions, private labels, and loyalty programs to sustain demand. For advertisers, this implies high promotional ad spend around these sales events. Brands should allocate more budget to digital and loyalty marketing to capitalize on the spike in discretionary spending.",
+      "positivityScore": 7,
+      "importanceScore": 8,
+      "date": null
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.745Z",
+      "country": "Canada",
+      "newsTitle": "Loblaw Q2 sales rise on grocery demand; shoppers favor local, budget brands",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/business/retail-consumer/loblaw-beats-quarterly-estimates-canadian-shoppers-turn-local-discount-brands-2025-07-24/",
+      "effect": "Loblaw reported +5.2% revenue (C$14.67 B) in Q2, driven by grocery and essentials ([www.reuters.com](https://www.reuters.com/business/retail-consumer/loblaw-beats-quarterly-estimates-canadian-shoppers-turn-local-discount-brands-2025-07-24/#:~:text=supported%20by%20increased%20demand%20for,commerce%20sales)). Canadian consumers are increasingly buying domestic (“Buy Canadian”) and lower-cost brands ([www.reuters.com](https://www.reuters.com/business/retail-consumer/loblaw-beats-quarterly-estimates-canadian-shoppers-turn-local-discount-brands-2025-07-24/#:~:text=medications%20at%20its%20discount%20stores,commerce%20sales)). Notably, e-commerce sales jumped +17.5% and same-store sales rose ~3–4%. For advertisers, this suggests shifting focus to digital channels and emphasizing local or value propositions. Grocery and drugstore ad buys will pay off, while premium brands may need to adjust messaging or promotions.",
+      "positivityScore": 8,
+      "importanceScore": 9,
+      "date": null
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.745Z",
+      "country": "Canada",
+      "newsTitle": "Patriotic Canadians boost domestic travel; local tour sales surge 75%",
+      "industry": "Ticketing/Events (Domestic Tourism)",
+      "link": "https://www.reuters.com/world/americas/montreal-over-miami-patriotic-canadians-change-summer-vacation-plans-2025-07-25/",
+      "effect": "According to Reuters, Canadian leisure travel shifted homeward amid U.S. tensions. A “Buy Canadian” sentiment drove a 75% spike in local travel package sales ([www.reuters.com](https://www.reuters.com/world/americas/montreal-over-miami-patriotic-canadians-change-summer-vacation-plans-2025-07-25/#:~:text=threats%20to%20annex%20Canada%20and,are%20exploring%20destinations%20like%20Ottawa)), plus 4% growth in domestic tourism spending. Destinations (e.g. Banff, Ottawa) saw record demand. For marketers, this is a big opportunity to reallocate travel and hospitality ad spend to domestic tourism campaigns. Airlines, hotels, and tourist boards should ramp up ads locally. Event and festival promotions in Canada will also enjoy higher engagement.",
+      "positivityScore": 9,
+      "importanceScore": 8,
+      "date": null
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.746Z",
+      "country": "China",
+      "newsTitle": "China urges local govts to spur consumption; retail sales set to top ¥50 trillion",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/",
+      "effect": "Chinese economists call for boosting consumer spending to offset slower growth. Commerce Minister projects annual retail sales to exceed ¥50 trillion ($7 trillion) by end-2025 ([www.reuters.com](https://www.reuters.com/markets/asia/economists-urge-chinese-local-govts-target-consumption-drive-growth-2025-07-18/#:~:text=Commerce%20Minister%20Wang%20Wentao%20acknowledged,are%20intensifying%20calls%20to%20make)). The focus on consumption means large-scale campaigns (e.g. subsidies, festivals) are likely. Advertisers should expect increased funding for consumer-oriented promotions and enter China’s huge market aggressively. Positive growth forecasts for retail indicate more ad inventory across TV, online, and in-store media.",
+      "positivityScore": 9,
+      "importanceScore": 9,
+      "date": null
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.746Z",
+      "country": "India",
+      "newsTitle": "Meesho e-commerce sales jump 33% in FY2024; IPO filing planned",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/world/india/indian-e-commerce-platform-meesho-files-confidentially-ipo-2025-07-03/",
+      "effect": "Meesho, a homegrown online retailer, saw revenue +33% YoY in FY24 (to ₹76.2 billion) and will soon IPO ([www.reuters.com](https://www.reuters.com/world/india/indian-e-commerce-platform-meesho-files-confidentially-ipo-2025-07-03/#:~:text=which%20competes%20with%20Amazon%20and,year%20to%2076.15%20billion)). This underscores India’s fast-growing e-commerce sector. For advertisers, it signals continued investment in digital marketing and affiliate programs. More Indian shoppers are buying online, so ad budgets should shift to mobile and social commerce channels. Rising e-commerce sales also benefit logistics and digital media partners in India.",
+      "positivityScore": 9,
+      "importanceScore": 9,
+      "date": null
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.746Z",
+      "country": "Germany",
+      "newsTitle": "German consumer sentiment hits 18-month low on saving binge",
+      "industry": "Retail/Consumer",
+      "link": "https://www.reuters.com/markets/europe/german-consumer-sentiment-falls-august-households-opt-save-finds-gfk-2025-07-24/",
+      "effect": "German consumer confidence fell again in August (index –21.5) as households become more cautious ([www.reuters.com](https://www.reuters.com/markets/europe/german-consumer-sentiment-falls-august-households-opt-save-finds-gfk-2025-07-24/#:~:text=German%20consumer%20sentiment%20is%20set,consumer%20caution%20and%20a%20heightened)). Germans are saving more amid uncertainty. This signals weaker retail spending ahead. Advertisers in Germany should anticipate reduced budgets from cautious consumers. Ad campaigns may need to emphasize value or essentials to maintain impact. Overall, this is a warning to focus on low-cost or high-ROI ads, as discretionary spending wanes.",
+      "positivityScore": 3,
+      "importanceScore": 7,
+      "date": null
+    },
+    {
+      "timeGenerated": "2025-07-28T20:45:11.746Z",
+      "country": "Brazil",
+      "newsTitle": "Brazil retail sales fall 0.2% in May as tightening bites",
+      "industry": "Retail",
+      "link": "https://www.reuters.com/world/americas/brazils-retail-sales-miss-forecasts-fall-second-straight-month-2025-07-08/",
+      "effect": "Brazilian retail sales unexpectedly dropped 0.2% in May (second consecutive monthly fall) ([www.reuters.com](https://www.reuters.com/world/americas/brazils-retail-sales-miss-forecasts-fall-second-straight-month-2025-07-08/#:~:text=In%20May%202025%2C%20Brazil%27s%20retail,Day%2C%20retail%20performance%20continued%20to)), despite warm holiday effects. Rising interest rates (15% policy rate) are cooling consumer demand. For advertisers, this suggests tightening budgets for retail campaigns in Brazil. Focus may shift to staple goods and discount chains where sales remain stable. Overall, expect a cautious approach: prioritize advertising that drives immediate conversions and appeal to value-conscious shoppers.",
+      "positivityScore": 2,
+      "importanceScore": 8,
+      "date": "July 8, 2025"
     }
   ],
   "success": true,
